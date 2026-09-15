@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -183,18 +183,19 @@ namespace LTWCHARLIEKODE
         // --- CÁC FORM DO BẠN (TEAM LEADER) PHỤ TRÁCH ---
         private void btnManageUsers_Click(object sender, EventArgs e)
         {
-            // Sau khi bạn tạo Form_UserManagement thì bỏ dấu // ở dòng dưới:
-            // OpenChildForm<Form_UserManagement>();
+            OpenChildForm<Form_UserManagement>();
         }
 
         private void btnManageRoles_Click(object sender, EventArgs e)
         {
-            // OpenChildForm<Form_RoleManagement>();
+            OpenChildForm<Form_RoleManagement>();
         }
 
         private void menuChangePassword_Click(object sender, EventArgs e)
         {
-            // OpenChildForm<Form_ChangePassword>();
+            Form_ChangePassword changePasswordForm = new Form_ChangePassword();
+            changePasswordForm.StartPosition = FormStartPosition.CenterParent;
+            changePasswordForm.ShowDialog(this);
         }
 
 

@@ -73,6 +73,24 @@
     <Compile Include="Form_Main.Designer.cs">
       <DependentUpon>Form_Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_UserManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_UserManagement.Designer.cs">
+      <DependentUpon>Form_UserManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_RoleManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_RoleManagement.Designer.cs">
+      <DependentUpon>Form_RoleManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ChangePassword.Designer.cs">
+      <DependentUpon>Form_ChangePassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="GymModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
