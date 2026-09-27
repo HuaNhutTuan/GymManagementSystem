@@ -182,6 +182,8 @@ IF NOT EXISTS (SELECT 1 FROM Users WHERE Username = 'admin')
 BEGIN
     INSERT INTO Users (Username, PasswordHash, FullName, RoleId, IsActive) VALUES
     ('admin', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', N'Quản Trị Viên', 1, 1),
+    ('tuan', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', N'Hứa Nhựt Tuấn', 1, 1),
+    ('tuanhua', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', N'Hứa Nhựt Tuấn', 1, 1),
     ('letan', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', N'Nguyễn Văn Lễ Tân', 2, 1),
     ('pt_tuan', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', N'Hứa Nhựt Tuấn (PT)', 3, 1);
 END
