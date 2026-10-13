@@ -58,6 +58,9 @@ namespace LTWCHARLIEKODE
                     btnRegisterPackage.Enabled = true;
                     btnCreateInvoice.Enabled = true;
                     menuCatalog.Enabled = true;
+                    btnPackagesCatalog.Enabled = true;
+                    btnManageTrainers.Enabled = true;
+                    btnEquipmentsCatalog.Enabled = true;
                     menuReports.Enabled = true;
                     break;
 
@@ -71,6 +74,9 @@ namespace LTWCHARLIEKODE
                     btnRegisterPackage.Enabled = true;
                     btnCreateInvoice.Enabled = true;
                     menuCatalog.Enabled = true;          // Bật Menu Danh mục
+                    btnPackagesCatalog.Enabled = true;
+                    btnManageTrainers.Enabled = true;
+                    btnEquipmentsCatalog.Enabled = true;
 
                     // Phân quyền chi tiết trên từng nút con:
                     btnRevenueReport.Enabled = false;   // Vẫn thấy menu Báo cáo nhưng khóa nút Doanh thu
@@ -89,18 +95,24 @@ namespace LTWCHARLIEKODE
                     btnCreateInvoice.Enabled = false;
 
                     menuCatalog.Enabled = true;
+                    btnPackagesCatalog.Enabled = true;
+                    btnManageTrainers.Enabled = true;
+                    btnEquipmentsCatalog.Enabled = true;
                     menuReports.Enabled = false;
                     break;
 
                 case 4:
-                    // HỘI VIÊN: Khóa chức năng Quản lý hội viên, giữ nguyên giới hạn hiện tại của account Hội viên
+                    // HỘI VIÊN: Khóa chức năng Quản lý hội viên, cho phép xem Danh mục gói tập
                     menuSystem.Enabled = true;
                     menuAdmin.Enabled = false;
                     menuBusiness.Enabled = false;       // Khóa toàn bộ menu Nghiệp vụ
                     btnManageMembers.Enabled = false;   // Khóa chức năng Quản lý hội viên
                     btnRegisterPackage.Enabled = false;
                     btnCreateInvoice.Enabled = false;
-                    menuCatalog.Enabled = false;
+                    menuCatalog.Enabled = true;          // Bật Menu Danh mục
+                    btnPackagesCatalog.Enabled = true;   // Xem chi tiết các gói tập
+                    btnManageTrainers.Enabled = false;   // Khóa danh mục HLV
+                    btnEquipmentsCatalog.Enabled = false;// Khóa danh mục thiết bị
                     menuReports.Enabled = false;
                     break;
 
@@ -113,6 +125,9 @@ namespace LTWCHARLIEKODE
                     btnRegisterPackage.Enabled = false;
                     btnCreateInvoice.Enabled = false;
                     menuCatalog.Enabled = false;
+                    btnPackagesCatalog.Enabled = false;
+                    btnManageTrainers.Enabled = false;
+                    btnEquipmentsCatalog.Enabled = false;
                     menuReports.Enabled = false;
                     break;
             }
@@ -243,7 +258,7 @@ namespace LTWCHARLIEKODE
 
         private void btnPackagesCatalog_Click(object sender, EventArgs e)
         {
-            // OpenChildForm<Form_PackageManagement>();
+            OpenChildForm<Form_PackageManagement>();
         }
 
 

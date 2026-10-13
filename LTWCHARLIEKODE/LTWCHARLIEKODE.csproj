@@ -97,6 +97,12 @@
     <Compile Include="Form_MemberManagement.Designer.cs">
       <DependentUpon>Form_MemberManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_PackageManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_PackageManagement.Designer.cs">
+      <DependentUpon>Form_PackageManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="GymModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

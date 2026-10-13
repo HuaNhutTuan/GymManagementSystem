@@ -193,8 +193,13 @@ GO
 IF NOT EXISTS (SELECT 1 FROM Packages)
 BEGIN
     INSERT INTO Packages (PackageName, Price, DurationDays, IsActive) VALUES
-    (N'Gói 1 Tháng Thường', 300000, 30, 1),
-    (N'Gói 3 Tháng Tiết Kiệm', 800000, 90, 1),
-    (N'Gói 1 Năm VIP (Có PT kèm)', 3500000, 365, 1);
+    (N'Gói 1 Tháng', 299000, 30, 1),
+    (N'Gói 3 Tháng', 807300, 90, 1),
+    (N'Gói 6 Tháng', 1435200, 180, 1),
+    (N'Gói 12 Tháng', 2332200, 365, 1),
+    (N'Gói 1 Tháng', 2700000, 30, 1),
+    (N'Gói 3 Tháng', 7290000, 90, 1),
+    (N'Gói 6 Tháng', 12960000, 180, 1),
+    (N'Gói 12 Tháng', 21000000, 365, 1);
 END
 GO

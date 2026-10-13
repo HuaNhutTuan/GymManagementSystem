@@ -238,7 +238,7 @@ namespace LTWCHARLIEKODE
                         int.TryParse(kw, out int searchId);
 
                         query = query.Where(m =>
-                            m.MemberId == searchId ||
+                            (searchId > 0 && m.MemberId == searchId) ||
                             m.FullName.ToLower().Contains(kw) ||
                             (m.Phone != null && m.Phone.ToLower().Contains(kw)) ||
                             (m.Email != null && m.Email.ToLower().Contains(kw)) ||
@@ -311,16 +311,21 @@ namespace LTWCHARLIEKODE
         // Định dạng DataGridView: chỉ hiển thị đúng 5 cột, các cột khác ẩn đi
         private void FormatBangHoiVien()
         {
-            dgvMembers.ColumnHeadersHeight = 36;
-            dgvMembers.RowTemplate.Height = 30;
+            dgvMembers.ScrollBars = ScrollBars.Both;
+            dgvMembers.ColumnHeadersHeight = 38;
+            dgvMembers.RowTemplate.Height = 34;
             dgvMembers.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
             dgvMembers.DefaultCellStyle.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular);
+            dgvMembers.DefaultCellStyle.WrapMode = DataGridViewTriState.False;
+            dgvMembers.ColumnHeadersDefaultCellStyle.WrapMode = DataGridViewTriState.False;
+            dgvMembers.AllowUserToResizeColumns = true;
 
             // 1. Mã HV
             if (dgvMembers.Columns["MaHV"] != null)
             {
                 dgvMembers.Columns["MaHV"].HeaderText = "Mã HV";
                 dgvMembers.Columns["MaHV"].Width = 85;
+                dgvMembers.Columns["MaHV"].MinimumWidth = 75;
                 dgvMembers.Columns["MaHV"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 dgvMembers.Columns["MaHV"].Visible = true;
             }
@@ -330,6 +335,7 @@ namespace LTWCHARLIEKODE
             {
                 dgvMembers.Columns["HoVaTen"].HeaderText = "Họ và tên";
                 dgvMembers.Columns["HoVaTen"].Width = 220;
+                dgvMembers.Columns["HoVaTen"].MinimumWidth = 180;
                 dgvMembers.Columns["HoVaTen"].Visible = true;
             }
 
@@ -338,6 +344,8 @@ namespace LTWCHARLIEKODE
             {
                 dgvMembers.Columns["SoDienThoai"].HeaderText = "SĐT";
                 dgvMembers.Columns["SoDienThoai"].Width = 130;
+                dgvMembers.Columns["SoDienThoai"].MinimumWidth = 110;
+                dgvMembers.Columns["SoDienThoai"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 dgvMembers.Columns["SoDienThoai"].Visible = true;
             }
 
@@ -346,6 +354,7 @@ namespace LTWCHARLIEKODE
             {
                 dgvMembers.Columns["Email"].HeaderText = "Email";
                 dgvMembers.Columns["Email"].Width = 210;
+                dgvMembers.Columns["Email"].MinimumWidth = 170;
                 dgvMembers.Columns["Email"].Visible = true;
             }
 
@@ -353,8 +362,9 @@ namespace LTWCHARLIEKODE
             if (dgvMembers.Columns["TrangThaiGoi"] != null)
             {
                 dgvMembers.Columns["TrangThaiGoi"].HeaderText = "Trạng thái gói tập";
-                dgvMembers.Columns["TrangThaiGoi"].MinimumWidth = 250;
+                dgvMembers.Columns["TrangThaiGoi"].MinimumWidth = 220;
                 dgvMembers.Columns["TrangThaiGoi"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                dgvMembers.Columns["TrangThaiGoi"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 dgvMembers.Columns["TrangThaiGoi"].Visible = true;
             }
 
@@ -390,15 +400,61 @@ namespace LTWCHARLIEKODE
 
                     dgvMemberPackages.DataSource = history;
 
-                    if (dgvMemberPackages.Columns["MaDangKy"] != null) dgvMemberPackages.Columns["MaDangKy"].HeaderText = "Mã ĐK";
-                    if (dgvMemberPackages.Columns["TenGoi"] != null) dgvMemberPackages.Columns["TenGoi"].HeaderText = "Tên gói tập";
-                    if (dgvMemberPackages.Columns["HLVPhuTrach"] != null) dgvMemberPackages.Columns["HLVPhuTrach"].HeaderText = "HLV (PT) phụ trách";
-                    if (dgvMemberPackages.Columns["NgayBatDau"] != null) dgvMemberPackages.Columns["NgayBatDau"].HeaderText = "Ngày bắt đầu";
-                    if (dgvMemberPackages.Columns["NgayKetThuc"] != null) dgvMemberPackages.Columns["NgayKetThuc"].HeaderText = "Ngày kết thúc";
-                    if (dgvMemberPackages.Columns["TrangThai"] != null) dgvMemberPackages.Columns["TrangThai"].HeaderText = "Trạng thái";
+                    dgvMemberPackages.ScrollBars = ScrollBars.Both;
+                    dgvMemberPackages.ColumnHeadersHeight = 36;
+                    dgvMemberPackages.RowTemplate.Height = 32;
+                    dgvMemberPackages.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+                    dgvMemberPackages.DefaultCellStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+                    dgvMemberPackages.DefaultCellStyle.WrapMode = DataGridViewTriState.False;
+                    dgvMemberPackages.AllowUserToResizeColumns = true;
+
+                    if (dgvMemberPackages.Columns["MaDangKy"] != null)
+                    {
+                        dgvMemberPackages.Columns["MaDangKy"].HeaderText = "Mã ĐK";
+                        dgvMemberPackages.Columns["MaDangKy"].Width = 75;
+                        dgvMemberPackages.Columns["MaDangKy"].MinimumWidth = 65;
+                        dgvMemberPackages.Columns["MaDangKy"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                    }
+                    if (dgvMemberPackages.Columns["TenGoi"] != null)
+                    {
+                        dgvMemberPackages.Columns["TenGoi"].HeaderText = "Tên gói tập";
+                        dgvMemberPackages.Columns["TenGoi"].Width = 160;
+                        dgvMemberPackages.Columns["TenGoi"].MinimumWidth = 140;
+                    }
+                    if (dgvMemberPackages.Columns["HLVPhuTrach"] != null)
+                    {
+                        dgvMemberPackages.Columns["HLVPhuTrach"].HeaderText = "HLV (PT) phụ trách";
+                        dgvMemberPackages.Columns["HLVPhuTrach"].Width = 160;
+                        dgvMemberPackages.Columns["HLVPhuTrach"].MinimumWidth = 140;
+                    }
+                    if (dgvMemberPackages.Columns["NgayBatDau"] != null)
+                    {
+                        dgvMemberPackages.Columns["NgayBatDau"].HeaderText = "Ngày bắt đầu";
+                        dgvMemberPackages.Columns["NgayBatDau"].Width = 115;
+                        dgvMemberPackages.Columns["NgayBatDau"].MinimumWidth = 100;
+                        dgvMemberPackages.Columns["NgayBatDau"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                    }
+                    if (dgvMemberPackages.Columns["NgayKetThuc"] != null)
+                    {
+                        dgvMemberPackages.Columns["NgayKetThuc"].HeaderText = "Ngày kết thúc";
+                        dgvMemberPackages.Columns["NgayKetThuc"].Width = 115;
+                        dgvMemberPackages.Columns["NgayKetThuc"].MinimumWidth = 100;
+                        dgvMemberPackages.Columns["NgayKetThuc"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                    }
+                    if (dgvMemberPackages.Columns["TrangThai"] != null)
+                    {
+                        dgvMemberPackages.Columns["TrangThai"].HeaderText = "Trạng thái";
+                        dgvMemberPackages.Columns["TrangThai"].MinimumWidth = 130;
+                        dgvMemberPackages.Columns["TrangThai"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                        dgvMemberPackages.Columns["TrangThai"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                    }
                 }
             }
-            catch { }
+            catch (Exception ex)
+            {
+                // Bỏ qua lỗi nếu hội viên chưa có gói tập hợp lệ
+                System.Diagnostics.Debug.WriteLine("Lỗi nạp lịch sử gói: " + ex.Message);
+            }
         }
 
         #endregion
@@ -483,7 +539,13 @@ namespace LTWCHARLIEKODE
                 return;
             }
 
-            int memberId = int.Parse(txtMemberId.Text);
+            if (!int.TryParse(txtMemberId.Text, out int memberId))
+            {
+                MessageBox.Show("Vui lòng chọn một hội viên từ danh sách trước khi cập nhật!",
+                                "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             string hoTen = txtFullName.Text.Trim();
             string sdt = txtPhone.Text.Trim();
             string email = txtEmail.Text.Trim();
@@ -629,13 +691,11 @@ namespace LTWCHARLIEKODE
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtMemberId.Text))
+            if (!int.TryParse(txtMemberId.Text, out int memberId))
             {
                 MessageBox.Show("Vui lòng chọn hội viên cần xóa từ danh sách!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
-            int memberId = int.Parse(txtMemberId.Text);
 
             try
             {
