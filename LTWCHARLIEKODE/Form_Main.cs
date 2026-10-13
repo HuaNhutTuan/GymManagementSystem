@@ -43,6 +43,7 @@ namespace LTWCHARLIEKODE
         /// RoleId = 1: Admin (Quản trị viên)
         /// RoleId = 2: Lễ Tân (Receptionist)
         /// RoleId = 3: PT (Huấn luyện viên cá nhân)
+        /// RoleId = 4: Hội viên (Gym Member)
         /// </summary>
         private void ApplyRolePermissions(int roleId)
         {
@@ -53,6 +54,9 @@ namespace LTWCHARLIEKODE
                     menuSystem.Enabled = true;
                     menuAdmin.Enabled = true;
                     menuBusiness.Enabled = true;
+                    btnManageMembers.Enabled = true;
+                    btnRegisterPackage.Enabled = true;
+                    btnCreateInvoice.Enabled = true;
                     menuCatalog.Enabled = true;
                     menuReports.Enabled = true;
                     break;
@@ -63,6 +67,9 @@ namespace LTWCHARLIEKODE
                     menuSystem.Enabled = true;
                     menuAdmin.Enabled = false;          // Ẩn/Mờ Menu Quản trị hệ thống
                     menuBusiness.Enabled = true;         // Bật Menu Nghiệp vụ
+                    btnManageMembers.Enabled = true;    // Toàn quyền Quản lý hội viên
+                    btnRegisterPackage.Enabled = true;
+                    btnCreateInvoice.Enabled = true;
                     menuCatalog.Enabled = true;          // Bật Menu Danh mục
 
                     // Phân quyền chi tiết trên từng nút con:
@@ -75,6 +82,7 @@ namespace LTWCHARLIEKODE
                     menuSystem.Enabled = true;
                     menuAdmin.Enabled = false;
                     menuBusiness.Enabled = true;
+                    btnManageMembers.Enabled = true;    // Mở Quản lý hội viên (trong form lọc chỉ xem HV mình hướng dẫn)
 
                     // Khóa các tính năng giao dịch tài chính của Lễ tân
                     btnRegisterPackage.Enabled = false;
@@ -84,10 +92,26 @@ namespace LTWCHARLIEKODE
                     menuReports.Enabled = false;
                     break;
 
+                case 4:
+                    // HỘI VIÊN: Khóa chức năng Quản lý hội viên, giữ nguyên giới hạn hiện tại của account Hội viên
+                    menuSystem.Enabled = true;
+                    menuAdmin.Enabled = false;
+                    menuBusiness.Enabled = false;       // Khóa toàn bộ menu Nghiệp vụ
+                    btnManageMembers.Enabled = false;   // Khóa chức năng Quản lý hội viên
+                    btnRegisterPackage.Enabled = false;
+                    btnCreateInvoice.Enabled = false;
+                    menuCatalog.Enabled = false;
+                    menuReports.Enabled = false;
+                    break;
+
                 default:
                     // Trường hợp mặc định hoặc Tài khoản bị khóa: Khóa tất cả
+                    menuSystem.Enabled = true;
                     menuAdmin.Enabled = false;
                     menuBusiness.Enabled = false;
+                    btnManageMembers.Enabled = false;
+                    btnRegisterPackage.Enabled = false;
+                    btnCreateInvoice.Enabled = false;
                     menuCatalog.Enabled = false;
                     menuReports.Enabled = false;
                     break;
@@ -202,7 +226,19 @@ namespace LTWCHARLIEKODE
         // --- CÁC FORM PHÂN CÔNG THÀNH VIÊN 2 (QUẢN LÝ HỘI VIÊN & GÓI TẬP) ---
         private void btnManageMembers_Click(object sender, EventArgs e)
         {
-            // OpenChildForm<Form_MemberManagement>();
+            // Kiểm tra phân quyền: Tài khoản role Hội viên bị khóa chức năng này
+            if (UserSession.RoleId == 4 || (UserSession.RoleId != 1 && UserSession.RoleId != 2 && UserSession.RoleId != 3))
+            {
+                MessageBox.Show(
+                    "Tài khoản Hội viên không có quyền truy cập vào chức năng Quản lý hội viên!",
+                    "Thông báo phân quyền",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+                return;
+            }
+
+            OpenChildForm<Form_MemberManagement>();
         }
 
         private void btnPackagesCatalog_Click(object sender, EventArgs e)
