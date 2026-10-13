@@ -41,6 +41,7 @@ namespace LTWCHARLIEKODE
             this.btnManageMembers = new System.Windows.Forms.ToolStripMenuItem();
             this.btnRegisterPackage = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCreateInvoice = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnPTSchedule = new System.Windows.Forms.ToolStripMenuItem();
             this.menuCatalog = new System.Windows.Forms.ToolStripMenuItem();
             this.btnPackagesCatalog = new System.Windows.Forms.ToolStripMenuItem();
             this.btnManageTrainers = new System.Windows.Forms.ToolStripMenuItem();
@@ -135,7 +136,8 @@ namespace LTWCHARLIEKODE
             this.menuBusiness.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnManageMembers,
             this.btnRegisterPackage,
-            this.btnCreateInvoice});
+            this.btnCreateInvoice,
+            this.btnPTSchedule});
             this.menuBusiness.Name = "menuBusiness";
             this.menuBusiness.Size = new System.Drawing.Size(91, 24);
             this.menuBusiness.Text = "Nghiệp vụ";
@@ -143,7 +145,7 @@ namespace LTWCHARLIEKODE
             // btnManageMembers
             // 
             this.btnManageMembers.Name = "btnManageMembers";
-            this.btnManageMembers.Size = new System.Drawing.Size(198, 26);
+            this.btnManageMembers.Size = new System.Drawing.Size(224, 26);
             this.btnManageMembers.Text = "Quản lý hội viên";
             this.btnManageMembers.Click += new System.EventHandler(this.btnManageMembers_Click);
             // 
@@ -157,9 +159,16 @@ namespace LTWCHARLIEKODE
             // btnCreateInvoice
             // 
             this.btnCreateInvoice.Name = "btnCreateInvoice";
-            this.btnCreateInvoice.Size = new System.Drawing.Size(198, 26);
-            this.btnCreateInvoice.Text = "Lập hóa đơn";
+            this.btnCreateInvoice.Size = new System.Drawing.Size(224, 26);
+            this.btnCreateInvoice.Text = "Danh sách hóa đơn";
             this.btnCreateInvoice.Click += new System.EventHandler(this.btnCreateInvoice_Click);
+            // 
+            // btnPTSchedule
+            // 
+            this.btnPTSchedule.Name = "btnPTSchedule";
+            this.btnPTSchedule.Size = new System.Drawing.Size(224, 26);
+            this.btnPTSchedule.Text = "Lịch tập với PT";
+            this.btnPTSchedule.Click += new System.EventHandler(this.btnPTSchedule_Click);
             // 
             // menuCatalog
             // 
@@ -278,6 +287,7 @@ namespace LTWCHARLIEKODE
         private System.Windows.Forms.ToolStripMenuItem btnManageMembers;
         private System.Windows.Forms.ToolStripMenuItem btnRegisterPackage;
         private System.Windows.Forms.ToolStripMenuItem btnCreateInvoice;
+        private System.Windows.Forms.ToolStripMenuItem btnPTSchedule;
         private System.Windows.Forms.ToolStripMenuItem menuCatalog;
         private System.Windows.Forms.ToolStripMenuItem btnPackagesCatalog;
         private System.Windows.Forms.ToolStripMenuItem btnManageTrainers;
