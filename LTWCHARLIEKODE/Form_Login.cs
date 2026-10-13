@@ -91,8 +91,25 @@ namespace LTWCHARLIEKODE
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Lỗi kết nối cơ sở dữ liệu: {ex.Message}", "Lỗi hệ thống", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                var choice = MessageBox.Show(
+                    $"Lỗi kết nối cơ sở dữ liệu: {ex.Message}\n\nBạn có muốn mở cửa sổ 'Cấu hình Server' để kiểm tra và chỉnh sửa lại tên máy chủ SQL không?",
+                    "Lỗi hệ thống",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Error
+                );
+
+                if (choice == DialogResult.Yes)
+                {
+                    btnServerConfig_Click(null, null);
+                }
             }
+        }
+
+        private void btnServerConfig_Click(object sender, EventArgs e)
+        {
+            Form_ServerConfig cfgForm = new Form_ServerConfig();
+            cfgForm.StartPosition = FormStartPosition.CenterParent;
+            cfgForm.ShowDialog(this);
         }
 
         private void btnExit_Click(object sender, EventArgs e)

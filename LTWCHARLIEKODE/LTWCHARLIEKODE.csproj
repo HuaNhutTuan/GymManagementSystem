@@ -13,6 +13,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <CodePage>65001</CodePage>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
@@ -56,6 +57,22 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="zxing">
+      <HintPath>..\packages\ZXing.Net.0.16.9\lib\net47\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation">
+      <HintPath>..\packages\ZXing.Net.0.16.9\lib\net47\zxing.presentation.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video">
+      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow">
+      <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Equipments.cs">
@@ -90,6 +107,25 @@
     </Compile>
     <Compile Include="Form_ChangePassword.Designer.cs">
       <DependentUpon>Form_ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ServerConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ServerConfig.Designer.cs">
+      <DependentUpon>Form_ServerConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_CheckInQR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_CheckInQR.Designer.cs">
+      <DependentUpon>Form_CheckInQR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmailReminderService.cs" />
+    <Compile Include="Form_EmailReminder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_EmailReminder.Designer.cs">
+      <DependentUpon>Form_EmailReminder.cs</DependentUpon>
     </Compile>
     <Compile Include="GymModel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -157,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Main.resx">
       <DependentUpon>Form_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_RoleManagement.resx">
+      <DependentUpon>Form_RoleManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

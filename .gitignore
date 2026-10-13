@@ -361,3 +361,8 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Member 4 build & tools
+nuget.exe
+SetupOutput/
+EmailConfig.xml

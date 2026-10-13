@@ -1,4 +1,4 @@
-namespace LTWCHARLIEKODE
+﻿namespace LTWCHARLIEKODE
 {
     partial class Form_ChangePassword
     {
