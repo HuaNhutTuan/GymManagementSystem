@@ -73,6 +73,9 @@
     <Reference Include="AForge.Video.DirectShow">
       <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
     </Reference>
+    <Reference Include="EPPlus">
+      <HintPath>..\packages\EPPlus.4.5.3.3\lib\net40\EPPlus.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Equipments.cs">
@@ -162,6 +165,19 @@
     </Compile>
     <Compile Include="Form_EmailReminder.Designer.cs">
       <DependentUpon>Form_EmailReminder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExcelExportHelper.cs" />
+    <Compile Include="Form_EquipmentManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_EquipmentManagement.Designer.cs">
+      <DependentUpon>Form_EquipmentManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_TrainerManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_TrainerManagement.Designer.cs">
+      <DependentUpon>Form_TrainerManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="GymModel.Context.cs">
       <AutoGen>True</AutoGen>

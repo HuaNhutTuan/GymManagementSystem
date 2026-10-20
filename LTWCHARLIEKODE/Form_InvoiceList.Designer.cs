@@ -34,6 +34,7 @@ namespace LTWCHARLIEKODE
             this.btnResetFilter = new System.Windows.Forms.Button();
             this.pnlActions = new System.Windows.Forms.Panel();
             this.btnPrintInvoice = new System.Windows.Forms.Button();
+            this.btnExportExcel = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.grpMaster = new System.Windows.Forms.GroupBox();
@@ -196,6 +197,7 @@ namespace LTWCHARLIEKODE
             this.pnlActions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlActions.Controls.Add(this.btnPrintInvoice);
+            this.pnlActions.Controls.Add(this.btnExportExcel);
             this.pnlActions.Controls.Add(this.btnClose);
             this.pnlActions.Location = new System.Drawing.Point(12, 608);
             this.pnlActions.Name = "pnlActions";
@@ -217,6 +219,22 @@ namespace LTWCHARLIEKODE
             this.btnPrintInvoice.Text = "IN HÓA ĐƠN ĐANG CHỌN";
             this.btnPrintInvoice.UseVisualStyleBackColor = false;
             this.btnPrintInvoice.Click += new System.EventHandler(this.btnPrintInvoice_Click);
+            // 
+            // btnExportExcel
+            // 
+            this.btnExportExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
+            this.btnExportExcel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExportExcel.FlatAppearance.BorderSize = 0;
+            this.btnExportExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExportExcel.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExportExcel.ForeColor = System.Drawing.Color.White;
+            this.btnExportExcel.Location = new System.Drawing.Point(280, 3);
+            this.btnExportExcel.Name = "btnExportExcel";
+            this.btnExportExcel.Size = new System.Drawing.Size(210, 36);
+            this.btnExportExcel.TabIndex = 2;
+            this.btnExportExcel.Text = "📊 Xuất Excel (EPPlus)";
+            this.btnExportExcel.UseVisualStyleBackColor = false;
+            this.btnExportExcel.Click += new System.EventHandler(this.btnExportExcel_Click);
             // 
             // btnClose
             // 
@@ -449,6 +467,7 @@ namespace LTWCHARLIEKODE
         private System.Windows.Forms.Button btnResetFilter;
         private System.Windows.Forms.Panel pnlActions;
         private System.Windows.Forms.Button btnPrintInvoice;
+        private System.Windows.Forms.Button btnExportExcel;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.GroupBox grpMaster;

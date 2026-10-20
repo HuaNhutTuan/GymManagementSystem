@@ -510,6 +510,129 @@ namespace LTWCHARLIEKODE
             if (cboTrainers.Items.Count > 0) cboTrainers.SelectedIndex = 0;
         }
 
+        private void btnCheckSlots_Click(object sender, EventArgs e)
+        {
+            if (cboTrainers.SelectedValue == null || !int.TryParse(cboTrainers.SelectedValue.ToString(), out int trainerId))
+            {
+                MessageBox.Show("Vui lòng chọn Huấn luyện viên (PT) cần kiểm tra lịch!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            DateTime selectedDate = dtpScheduleDate.Value.Date;
+            string trainerName = cboTrainers.Text;
+
+            try
+            {
+                // Lấy tất cả ca đã đặt của PT trong ngày được chọn mà chưa bị hủy
+                var bookedSlots = new System.Collections.Generic.List<Tuple<TimeSpan, TimeSpan, string>>();
+                using (var conn = new SqlConnection(_connectionString))
+                {
+                    conn.Open();
+                    string sql = @"
+                        SELECT s.StartTime, s.EndTime, m.FullName
+                        FROM PTSchedules s
+                        JOIN Members m ON s.MemberId = m.MemberId
+                        WHERE s.TrainerId = @TrainerId 
+                          AND s.ScheduleDate = @ScheduleDate 
+                          AND s.Status <> N'Đã hủy'
+                        ORDER BY s.StartTime ASC";
+
+                    using (var cmd = new SqlCommand(sql, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@TrainerId", trainerId);
+                        cmd.Parameters.AddWithValue("@ScheduleDate", selectedDate);
+
+                        using (var reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                bookedSlots.Add(new Tuple<TimeSpan, TimeSpan, string>(
+                                    (TimeSpan)reader["StartTime"],
+                                    (TimeSpan)reader["EndTime"],
+                                    reader["FullName"].ToString()
+                                ));
+                            }
+                        }
+                    }
+                }
+
+                // Định nghĩa các khung giờ tập phổ biến trong ngày (06:00 đến 21:00)
+                var standardSlots = new System.Collections.Generic.List<Tuple<TimeSpan, TimeSpan>>()
+                {
+                    new Tuple<TimeSpan, TimeSpan>(new TimeSpan(6, 0, 0), new TimeSpan(7, 0, 0)),
+                    new Tuple<TimeSpan, TimeSpan>(new TimeSpan(7, 0, 0), new TimeSpan(8, 0, 0)),
+                    new Tuple<TimeSpan, TimeSpan>(new TimeSpan(8, 0, 0), new TimeSpan(9, 0, 0)),
+                    new Tuple<TimeSpan, TimeSpan>(new TimeSpan(9, 0, 0), new TimeSpan(10, 0, 0)),
+                    new Tuple<TimeSpan, TimeSpan>(new TimeSpan(10, 0, 0), new TimeSpan(11, 0, 0)),
+                    new Tuple<TimeSpan, TimeSpan>(new TimeSpan(14, 0, 0), new TimeSpan(15, 0, 0)),
+                    new Tuple<TimeSpan, TimeSpan>(new TimeSpan(15, 0, 0), new TimeSpan(16, 0, 0)),
+                    new Tuple<TimeSpan, TimeSpan>(new TimeSpan(16, 0, 0), new TimeSpan(17, 0, 0)),
+                    new Tuple<TimeSpan, TimeSpan>(new TimeSpan(17, 0, 0), new TimeSpan(18, 0, 0)),
+                    new Tuple<TimeSpan, TimeSpan>(new TimeSpan(18, 0, 0), new TimeSpan(19, 0, 0)),
+                    new Tuple<TimeSpan, TimeSpan>(new TimeSpan(19, 0, 0), new TimeSpan(20, 0, 0)),
+                    new Tuple<TimeSpan, TimeSpan>(new TimeSpan(20, 0, 0), new TimeSpan(21, 0, 0))
+                };
+
+                var availableSlots = new System.Collections.Generic.List<Tuple<TimeSpan, TimeSpan>>();
+                foreach (var slot in standardSlots)
+                {
+                    bool isOverlap = bookedSlots.Any(b => (slot.Item1 < b.Item2) && (slot.Item2 > b.Item1));
+                    if (!isOverlap)
+                    {
+                        availableSlots.Add(slot);
+                    }
+                }
+
+                var sb = new System.Text.StringBuilder();
+                sb.AppendLine($"📅 LỊCH TRỐNG CỦA HLV: {trainerName}");
+                sb.AppendLine($"Ngày: {selectedDate:dd/MM/yyyy}");
+                sb.AppendLine(new string('-', 45));
+
+                if (bookedSlots.Count > 0)
+                {
+                    sb.AppendLine("🔴 Các ca đã có lịch:");
+                    foreach (var b in bookedSlots)
+                    {
+                        sb.AppendLine($"   • {b.Item1:hh\\:mm} - {b.Item2:hh\\:mm} : {b.Item3}");
+                    }
+                    sb.AppendLine();
+                }
+
+                if (availableSlots.Count > 0)
+                {
+                    sb.AppendLine($"🟢 Có {availableSlots.Count} khung giờ còn trống:");
+                    foreach (var s in availableSlots)
+                    {
+                        sb.AppendLine($"   ✔ {s.Item1:hh\\:mm} - {s.Item2:hh\\:mm}");
+                    }
+                    sb.AppendLine(new string('-', 45));
+                    sb.AppendLine("Bạn có muốn tự động điền khung giờ trống gần nhất vào lịch tập không?");
+
+                    var dr = MessageBox.Show(sb.ToString(), "Khung Giờ Trống Của HLV", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                    if (dr == DialogResult.Yes)
+                    {
+                        var firstFree = availableSlots.First();
+                        dtpStartTime.Value = DateTime.Today.Add(firstFree.Item1);
+                        dtpEndTime.Value = DateTime.Today.Add(firstFree.Item2);
+                    }
+                }
+                else
+                {
+                    sb.AppendLine("⚠ Huấn luyện viên đã kín toàn bộ lịch trong ngày này!");
+                    MessageBox.Show(sb.ToString(), "Thông Báo Lịch Kín", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi kiểm tra giờ trống: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnExportExcel_Click(object sender, EventArgs e)
+        {
+            ExcelExportHelper.ExportDataGridViewWithDialog(dgvSchedules, "Lich_Tap_PT", "LichTap", "LỊCH TẬP & CA HUẤN LUYỆN VIÊN (PT)");
+        }
+
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();

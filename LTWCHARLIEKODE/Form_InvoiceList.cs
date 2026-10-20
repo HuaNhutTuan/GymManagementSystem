@@ -32,6 +32,8 @@ namespace LTWCHARLIEKODE
 
             LoadInvoices();
 
+            txtKeyword.TextChanged += (senderObj, eventArgs) => LoadInvoices(txtKeyword.Text, dtpFromDate.Value, dtpToDate.Value);
+
             if (_initialInvoiceId.HasValue)
             {
                 SelectInvoiceById(_initialInvoiceId.Value);
@@ -386,6 +388,11 @@ namespace LTWCHARLIEKODE
                 words = char.ToUpper(words[0]) + words.Substring(1);
             }
             return words;
+        }
+
+        private void btnExportExcel_Click(object sender, EventArgs e)
+        {
+            ExcelExportHelper.ExportDataGridViewWithDialog(dgvInvoices, "Danh_Sach_Hoa_Don", "HoaDon", "DANH SÁCH HÓA ĐƠN & DOANH THU PHÒNG GYM");
         }
 
         private void btnClose_Click(object sender, EventArgs e)

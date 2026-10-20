@@ -52,6 +52,8 @@ namespace LTWCHARLIEKODE
             this.chkFilterByDate = new System.Windows.Forms.CheckBox();
             this.btnFilter = new System.Windows.Forms.Button();
             this.btnFilterAll = new System.Windows.Forms.Button();
+            this.btnExportExcel = new System.Windows.Forms.Button();
+            this.btnCheckSlots = new System.Windows.Forms.Button();
             this.dgvSchedules = new System.Windows.Forms.DataGridView();
             this.pnlHeader.SuspendLayout();
             this.grpInput.SuspendLayout();
@@ -100,6 +102,7 @@ namespace LTWCHARLIEKODE
             this.grpInput.Controls.Add(this.dtpEndTime);
             this.grpInput.Controls.Add(this.lblStatus);
             this.grpInput.Controls.Add(this.cboStatus);
+            this.grpInput.Controls.Add(this.btnCheckSlots);
             this.grpInput.Controls.Add(this.lblNotes);
             this.grpInput.Controls.Add(this.txtNotes);
             this.grpInput.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -277,6 +280,22 @@ namespace LTWCHARLIEKODE
             this.txtNotes.Size = new System.Drawing.Size(840, 29);
             this.txtNotes.TabIndex = 15;
             // 
+            // btnCheckSlots
+            // 
+            this.btnCheckSlots.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
+            this.btnCheckSlots.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCheckSlots.FlatAppearance.BorderSize = 0;
+            this.btnCheckSlots.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCheckSlots.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckSlots.ForeColor = System.Drawing.Color.White;
+            this.btnCheckSlots.Location = new System.Drawing.Point(910, 27);
+            this.btnCheckSlots.Name = "btnCheckSlots";
+            this.btnCheckSlots.Size = new System.Drawing.Size(150, 31);
+            this.btnCheckSlots.TabIndex = 16;
+            this.btnCheckSlots.Text = "🔍 Xem Giờ Trống";
+            this.btnCheckSlots.UseVisualStyleBackColor = false;
+            this.btnCheckSlots.Click += new System.EventHandler(this.btnCheckSlots_Click);
+            // 
             // pnlButtons
             // 
             this.pnlButtons.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -384,6 +403,7 @@ namespace LTWCHARLIEKODE
             this.grpFilter.Controls.Add(this.chkFilterByDate);
             this.grpFilter.Controls.Add(this.btnFilter);
             this.grpFilter.Controls.Add(this.btnFilterAll);
+            this.grpFilter.Controls.Add(this.btnExportExcel);
             this.grpFilter.Controls.Add(this.dgvSchedules);
             this.grpFilter.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(43)))), ((int)(((byte)(73)))));
@@ -476,6 +496,22 @@ namespace LTWCHARLIEKODE
             this.btnFilterAll.Text = "Tất Cả";
             this.btnFilterAll.UseVisualStyleBackColor = false;
             this.btnFilterAll.Click += new System.EventHandler(this.btnFilterAll_Click);
+            // 
+            // btnExportExcel
+            // 
+            this.btnExportExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(139)))), ((int)(((byte)(34)))));
+            this.btnExportExcel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExportExcel.FlatAppearance.BorderSize = 0;
+            this.btnExportExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExportExcel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExportExcel.ForeColor = System.Drawing.Color.White;
+            this.btnExportExcel.Location = new System.Drawing.Point(958, 25);
+            this.btnExportExcel.Name = "btnExportExcel";
+            this.btnExportExcel.Size = new System.Drawing.Size(110, 30);
+            this.btnExportExcel.TabIndex = 8;
+            this.btnExportExcel.Text = "📊 Xuất Excel";
+            this.btnExportExcel.UseVisualStyleBackColor = false;
+            this.btnExportExcel.Click += new System.EventHandler(this.btnExportExcel_Click);
             // 
             // dgvSchedules
             // 
@@ -578,6 +614,8 @@ namespace LTWCHARLIEKODE
         private System.Windows.Forms.CheckBox chkFilterByDate;
         private System.Windows.Forms.Button btnFilter;
         private System.Windows.Forms.Button btnFilterAll;
+        private System.Windows.Forms.Button btnExportExcel;
+        private System.Windows.Forms.Button btnCheckSlots;
         private System.Windows.Forms.DataGridView dgvSchedules;
     }
 }

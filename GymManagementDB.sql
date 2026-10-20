@@ -1,4 +1,4 @@
-﻿-- ==========================================================
+-- ==========================================================
 -- SCRIPT TẠO DATABASE VÀ DỮ LIỆU MẪU CHO GYMMANAGEMENTDB
 -- Hệ thống Quản lý Phòng Gym (Gym Management System)
 -- ==========================================================
@@ -175,6 +175,22 @@ BEGIN
         Notes NVARCHAR(250) NULL,
         CONSTRAINT FK_PTSchedules_Members FOREIGN KEY (MemberId) REFERENCES Members(MemberId),
         CONSTRAINT FK_PTSchedules_Trainers FOREIGN KEY (TrainerId) REFERENCES Trainers(TrainerId)
+    );
+END
+GO
+
+-- 13. Bảng EquipmentMaintenance (Lịch sử sửa chữa & Chi phí bảo trì thiết bị)
+IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'EquipmentMaintenance')
+BEGIN
+    CREATE TABLE EquipmentMaintenance (
+        MaintenanceId INT IDENTITY(1,1) PRIMARY KEY,
+        EquipmentId INT NOT NULL,
+        MaintenanceDate DATETIME NOT NULL DEFAULT GETDATE(),
+        Description NVARCHAR(250) NOT NULL,
+        Cost DECIMAL(18,2) NOT NULL DEFAULT 0,
+        Status NVARCHAR(50) NOT NULL DEFAULT N'Đang bảo trì',
+        PerformedBy NVARCHAR(100) NULL,
+        CONSTRAINT FK_EM_Equipments FOREIGN KEY (EquipmentId) REFERENCES Equipments(EquipmentId)
     );
 END
 GO

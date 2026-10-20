@@ -329,12 +329,12 @@ namespace LTWCHARLIEKODE
 
         private void btnManageTrainers_Click(object sender, EventArgs e)
         {
-            // OpenChildForm<Form_TrainerManagement>();
+            OpenChildForm<Form_TrainerManagement>();
         }
 
         private void btnEquipmentsCatalog_Click(object sender, EventArgs e)
         {
-            // OpenChildForm<Form_EquipmentManagement>();
+            OpenChildForm<Form_EquipmentManagement>();
         }
 
         private void btnRevenueReport_Click(object sender, EventArgs e)

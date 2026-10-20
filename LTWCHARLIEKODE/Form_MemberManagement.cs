@@ -1,4 +1,5 @@
 using System;
+using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -18,6 +19,22 @@ namespace LTWCHARLIEKODE
             InitializeComponent();
         }
 
+        [System.Runtime.InteropServices.DllImport("user32.dll", CharSet = System.Runtime.InteropServices.CharSet.Auto)]
+        private static extern int SendMessage(IntPtr hWnd, int msg, int wParam, [System.Runtime.InteropServices.MarshalAs(System.Runtime.InteropServices.UnmanagedType.LPWStr)] string lParam);
+        private const int EM_SETCUEBANNER = 0x1501;
+
+        private void SetPlaceholder(TextBox txt, string placeholder)
+        {
+            try
+            {
+                if (txt.IsHandleCreated)
+                    SendMessage(txt.Handle, EM_SETCUEBANNER, 1, placeholder);
+                else
+                    txt.HandleCreated += (s, e) => SendMessage(txt.Handle, EM_SETCUEBANNER, 1, placeholder);
+            }
+            catch { }
+        }
+
         private void Form_MemberManagement_Load(object sender, EventArgs e)
         {
             // 1. Kiểm tra phân quyền truy cập
@@ -31,6 +48,15 @@ namespace LTWCHARLIEKODE
 
             // 3. Nạp danh mục gói tập vào ComboBox lọc
             LoadComboBoxGoiTap();
+
+            // Khởi tạo ComboBox trạng thái lọc
+            if (cboStatusFilter != null && cboStatusFilter.Items.Count > 0)
+            {
+                cboStatusFilter.SelectedIndex = 0; // "Tất cả"
+            }
+
+            // Gán placeholder cho ô tìm kiếm
+            SetPlaceholder(txtSearch, "Nhập tên hoặc số điện thoại...");
 
             // 4. Nạp danh sách hội viên lên bảng
             LoadMembers();
@@ -200,8 +226,8 @@ namespace LTWCHARLIEKODE
             }
         }
 
-        // Tải danh sách hội viên lên DataGridView
-        private void LoadMembers(string tuKhoa = "", int packageIdFilter = 0)
+        // Tải danh sách hội viên lên DataGridView (kèm Live Search & Lọc Trạng thái)
+        private void LoadMembers(string tuKhoa = "", int packageIdFilter = 0, string statusFilter = "Tất cả")
         {
             try
             {
@@ -258,7 +284,18 @@ namespace LTWCHARLIEKODE
                         query = query.Where(m => hvTrongGoi.Contains(m.MemberId));
                     }
 
-                    // 4. Lấy dữ liệu và map ra thông tin
+                    // 4. Lọc theo trạng thái hội viên (Tất cả, Đang tập, Đã hết hạn)
+                    DateTime today = DateTime.Today;
+                    if (statusFilter == "Đang tập")
+                    {
+                        query = query.Where(m => m.MemberPackages.Any(mp => mp.IsActive == true && mp.EndDate >= today));
+                    }
+                    else if (statusFilter == "Đã hết hạn")
+                    {
+                        query = query.Where(m => !m.MemberPackages.Any(mp => mp.IsActive == true && mp.EndDate >= today));
+                    }
+
+                    // 5. Lấy dữ liệu và map ra thông tin
                     var rawList = query.OrderByDescending(m => m.MemberId).ToList();
 
                     var displayList = rawList.Select(m =>
@@ -750,6 +787,10 @@ namespace LTWCHARLIEKODE
             {
                 cboPackageFilter.SelectedIndex = 0;
             }
+            if (cboStatusFilter != null && cboStatusFilter.Items.Count > 0)
+            {
+                cboStatusFilter.SelectedIndex = 0;
+            }
             ResetForm();
             LoadMembers();
         }
@@ -761,7 +802,7 @@ namespace LTWCHARLIEKODE
 
         #endregion
 
-        #region 7. TÌM KIẾM VÀ LỌC THEO GÓI
+        #region 7. TÌM KIẾM TỨC THÌ (LIVE SEARCH), LỌC & XUẤT EXCEL (EPPLUS)
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
@@ -775,6 +816,17 @@ namespace LTWCHARLIEKODE
                 e.SuppressKeyPress = true;
                 ThucHienTimKiem();
             }
+        }
+
+        // TÌM KIẾM TỨC THÌ (LIVE SEARCH) KHI GÕ CHỮ
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            ThucHienTimKiem();
+        }
+
+        private void cboStatusFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ThucHienTimKiem();
         }
 
         private void cboPackageFilter_SelectedIndexChanged(object sender, EventArgs e)
@@ -793,7 +845,64 @@ namespace LTWCHARLIEKODE
             {
                 packageId = pId;
             }
-            LoadMembers(tuKhoa, packageId);
+            string status = cboStatusFilter?.SelectedItem?.ToString() ?? "Tất cả";
+            LoadMembers(tuKhoa, packageId, status);
+        }
+
+        // XUẤT DANH SÁCH RA FILE EXCEL (.XLSX) BẰNG EPPLUS
+        private void btnExportExcel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgvMembers.Rows.Count == 0)
+                {
+                    MessageBox.Show("Không có dữ liệu hội viên để xuất ra file Excel!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
+                SaveFileDialog sfd = new SaveFileDialog();
+                sfd.Filter = "Excel Workbook (*.xlsx)|*.xlsx";
+                sfd.FileName = $"DanhSachHoiVien_{DateTime.Now:yyyyMMdd_HHmmss}.xlsx";
+
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    DataTable dt = new DataTable();
+                    dt.Columns.Add("Mã HV", typeof(int));
+                    dt.Columns.Add("Họ và Tên", typeof(string));
+                    dt.Columns.Add("Số Điện Thoại", typeof(string));
+                    dt.Columns.Add("Email", typeof(string));
+                    dt.Columns.Add("Trạng Thái Gói", typeof(string));
+                    dt.Columns.Add("Gói Tập Hiện Tại", typeof(string));
+                    dt.Columns.Add("Huấn Luyện Viên (PT)", typeof(string));
+
+                    foreach (DataGridViewRow row in dgvMembers.Rows)
+                    {
+                        if (row.IsNewRow) continue;
+                        dt.Rows.Add(
+                            Convert.ToInt32(row.Cells["MaHV"].Value ?? 0),
+                            row.Cells["HoVaTen"].Value?.ToString() ?? "",
+                            row.Cells["SoDienThoai"].Value?.ToString() ?? "",
+                            row.Cells["Email"].Value?.ToString() ?? "",
+                            row.Cells["TrangThaiGoi"].Value?.ToString() ?? "",
+                            row.Cells["GoiTapHienTai"].Value?.ToString() ?? "",
+                            row.Cells["HLVHuongDan"].Value?.ToString() ?? ""
+                        );
+                    }
+
+                    ExcelExportHelper.ExportToExcel(dt, sfd.FileName, "HoiVien", "BÁO CÁO DANH SÁCH HỘI VIÊN PHÒNG GYM");
+
+                    var result = MessageBox.Show("Xuất danh sách hội viên ra file Excel thành công bằng EPPlus!\nBạn có muốn mở file ngay không?",
+                                                 "Thành công", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
+                    {
+                        System.Diagnostics.Process.Start(sfd.FileName);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi xuất file Excel: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         #endregion
