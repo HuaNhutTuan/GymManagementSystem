@@ -1,7 +1,7 @@
 ; =====================================================================
 ; KỊCH BẢN ĐÓNG GÓI BỘ CÀI ĐẶT INNO SETUP CHO HỆ THỐNG QUẢN LÝ PHÒNG GYM
 ; Môn học: Lập trình trên Windows - Trường ĐH Sư Phạm TP.HCM (HCMUE)
-; Phân công: Member 4 (Integrations, Packaging & QA/Doc)
+; Phân công: Nguyễn Đăng Khoa (Thành viên 2 - Integrations, Packaging & QA/Doc)
 ; =====================================================================
 
 #define MyAppName "Hệ Thống Quản Lý Phòng Gym & Fitness"
