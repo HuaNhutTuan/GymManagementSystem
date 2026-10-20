@@ -262,19 +262,24 @@ namespace LTWCHARLIEKODE
         }
 
 
-        // --- CÁC FORM PHÂN CÔNG THÀNH VIÊN 3 (QUẢN LÝ THU TIỀN & HÓA ĐƠN) ---
+        // --- CÁC FORM PHÂN CÔNG THÀNH VIÊN 3 (QUẢN LÝ THU TIỀN & HÓA ĐƠN & BÁO CÁO) ---
         private void btnRegisterPackage_Click(object sender, EventArgs e)
         {
-            // OpenChildForm<Form_RegisterPackage>();
+            OpenChildForm<Form_RegisterPackage>();
         }
 
         private void btnCreateInvoice_Click(object sender, EventArgs e)
         {
-            // OpenChildForm<Form_InvoiceManagement>();
+            OpenChildForm<Form_InvoiceList>();
+        }
+
+        private void btnPTSchedule_Click(object sender, EventArgs e)
+        {
+            OpenChildForm<Form_PTSchedule>();
         }
 
 
-        // --- CÁC FORM PHÂN CÔNG THÀNH VIÊN 4 (QUẢN LÝ PT & THIẾT BỊ & BÁO CÁO) ---
+        // --- CÁC FORM PHÂN CÔNG THÀNH VIÊN 4 (QUẢN LÝ PT & THIẾT BỊ) ---
         private void btnManageTrainers_Click(object sender, EventArgs e)
         {
             // OpenChildForm<Form_TrainerManagement>();
@@ -287,7 +292,7 @@ namespace LTWCHARLIEKODE
 
         private void btnRevenueReport_Click(object sender, EventArgs e)
         {
-            // OpenChildForm<Form_RevenueReport>();
+            OpenChildForm<Form_RevenueReport>();
         }
 
         #endregion

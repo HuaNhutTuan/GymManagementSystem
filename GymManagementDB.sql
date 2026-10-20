@@ -161,6 +161,24 @@ BEGIN
 END
 GO
 
+-- 12. Bảng PTSchedules (Lịch tập với PT - Member 3)
+IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'PTSchedules')
+BEGIN
+    CREATE TABLE PTSchedules (
+        ScheduleId INT IDENTITY(1,1) PRIMARY KEY,
+        MemberId INT NOT NULL,
+        TrainerId INT NOT NULL,
+        ScheduleDate DATE NOT NULL,
+        StartTime TIME(0) NOT NULL,
+        EndTime TIME(0) NOT NULL,
+        Status NVARCHAR(50) NOT NULL DEFAULT N'Đã lên lịch',
+        Notes NVARCHAR(250) NULL,
+        CONSTRAINT FK_PTSchedules_Members FOREIGN KEY (MemberId) REFERENCES Members(MemberId),
+        CONSTRAINT FK_PTSchedules_Trainers FOREIGN KEY (TrainerId) REFERENCES Trainers(TrainerId)
+    );
+END
+GO
+
 -- ==========================================================
 -- DỮ LIỆU KHỞI TẠO BAN ĐẦU (SEED DATA)
 -- ==========================================================

@@ -103,6 +103,30 @@
     <Compile Include="Form_PackageManagement.Designer.cs">
       <DependentUpon>Form_PackageManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_RegisterPackage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_RegisterPackage.Designer.cs">
+      <DependentUpon>Form_RegisterPackage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_PTSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_PTSchedule.Designer.cs">
+      <DependentUpon>Form_PTSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_InvoiceList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_InvoiceList.Designer.cs">
+      <DependentUpon>Form_InvoiceList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_RevenueReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_RevenueReport.Designer.cs">
+      <DependentUpon>Form_RevenueReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="GymModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
