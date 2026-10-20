@@ -35,6 +35,7 @@ namespace LTWCHARLIEKODE
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnServerConfig = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -119,6 +120,23 @@ namespace LTWCHARLIEKODE
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // 
+            // btnServerConfig
+            // 
+            this.btnServerConfig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(196)))), ((int)(((byte)(15)))));
+            this.btnServerConfig.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnServerConfig.FlatAppearance.BorderSize = 0;
+            this.btnServerConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnServerConfig.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnServerConfig.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.btnServerConfig.Location = new System.Drawing.Point(40, 180);
+            this.btnServerConfig.Name = "btnServerConfig";
+            this.btnServerConfig.Size = new System.Drawing.Size(130, 36);
+            this.btnServerConfig.TabIndex = 7;
+            this.btnServerConfig.Text = "⚙ Cấu hình DB";
+            this.btnServerConfig.UseVisualStyleBackColor = false;
+            this.btnServerConfig.Click += new System.EventHandler(this.btnServerConfig_Click);
+            // 
             // Form_Login
             // 
             this.AcceptButton = this.btnLogin;
@@ -127,6 +145,7 @@ namespace LTWCHARLIEKODE
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.CancelButton = this.btnExit;
             this.ClientSize = new System.Drawing.Size(480, 245);
+            this.Controls.Add(this.btnServerConfig);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
@@ -154,5 +173,6 @@ namespace LTWCHARLIEKODE
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnServerConfig;
     }
 }

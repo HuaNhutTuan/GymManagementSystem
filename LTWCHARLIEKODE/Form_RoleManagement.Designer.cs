@@ -1,4 +1,4 @@
-namespace LTWCHARLIEKODE
+﻿namespace LTWCHARLIEKODE
 {
     partial class Form_RoleManagement
     {
@@ -52,7 +52,7 @@ namespace LTWCHARLIEKODE
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(90)))), ((int)(((byte)(157)))));
             this.lblTitle.Location = new System.Drawing.Point(20, 15);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(434, 37);
+            this.lblTitle.Size = new System.Drawing.Size(436, 37);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "QUẢN LÝ VAI TRÒ & PHÂN QUYỀN";
             // 
@@ -105,7 +105,7 @@ namespace LTWCHARLIEKODE
             this.lblRoleName.AutoSize = true;
             this.lblRoleName.Location = new System.Drawing.Point(20, 81);
             this.lblRoleName.Name = "lblRoleName";
-            this.lblRoleName.Size = new System.Drawing.Size(86, 21);
+            this.lblRoleName.Size = new System.Drawing.Size(84, 21);
             this.lblRoleName.TabIndex = 2;
             this.lblRoleName.Text = "Tên vai trò:";
             // 
@@ -123,7 +123,7 @@ namespace LTWCHARLIEKODE
             this.lblRoleId.AutoSize = true;
             this.lblRoleId.Location = new System.Drawing.Point(20, 35);
             this.lblRoleId.Name = "lblRoleId";
-            this.lblRoleId.Size = new System.Drawing.Size(85, 21);
+            this.lblRoleId.Size = new System.Drawing.Size(83, 21);
             this.lblRoleId.TabIndex = 0;
             this.lblRoleId.Text = "Mã vai trò:";
             // 

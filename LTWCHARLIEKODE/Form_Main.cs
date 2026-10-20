@@ -36,6 +36,9 @@ namespace LTWCHARLIEKODE
 
             // D. Thực thi Phân quyền giao diện theo RoleId từ UserSession
             ApplyRolePermissions(UserSession.RoleId);
+
+            // E. Chạy tác vụ ngầm kiểm tra các gói tập sắp hết hạn (< 5 ngày)
+            CheckExpiringPackagesInBackground();
         }
 
         /// <summary>
@@ -279,7 +282,51 @@ namespace LTWCHARLIEKODE
         }
 
 
-        // --- CÁC FORM PHÂN CÔNG THÀNH VIÊN 4 (QUẢN LÝ PT & THIẾT BỊ) ---
+        // --- CÁC FORM PHÂN CÔNG THÀNH VIÊN 4 (INTEGRATION, QR CHECK-IN, EMAIL, SERVER CONFIG) ---
+        private void btnCheckInQR_Click(object sender, EventArgs e)
+        {
+            OpenChildForm<Form_CheckInQR>();
+        }
+
+        private void btnEmailReminder_Click(object sender, EventArgs e)
+        {
+            OpenChildForm<Form_EmailReminder>();
+        }
+
+        private void menuServerConfig_Click(object sender, EventArgs e)
+        {
+            Form_ServerConfig cfg = new Form_ServerConfig();
+            cfg.StartPosition = FormStartPosition.CenterParent;
+            cfg.ShowDialog(this);
+        }
+
+        private void lblExpiringAlert_Click(object sender, EventArgs e)
+        {
+            OpenChildForm<Form_EmailReminder>();
+        }
+
+        private async void CheckExpiringPackagesInBackground()
+        {
+            try
+            {
+                var list = await System.Threading.Tasks.Task.Run(() => EmailReminderService.GetExpiringMembers(5));
+                if (list != null && list.Count > 0)
+                {
+                    lblExpiringAlert.Text = $"  |  🔔 Có {list.Count} gói tập sắp hết hạn (< 5 ngày). Nhấn để xem & gửi Email!";
+                    lblExpiringAlert.LinkColor = Color.Crimson;
+                }
+                else
+                {
+                    lblExpiringAlert.Text = "  |  ✓ Không có gói tập nào sắp hết hạn trong 5 ngày tới.";
+                    lblExpiringAlert.LinkColor = Color.DarkGreen;
+                }
+            }
+            catch
+            {
+                lblExpiringAlert.Text = "  |  🔔 Nhấn để kiểm tra danh sách sắp hết hạn";
+            }
+        }
+
         private void btnManageTrainers_Click(object sender, EventArgs e)
         {
             // OpenChildForm<Form_TrainerManagement>();

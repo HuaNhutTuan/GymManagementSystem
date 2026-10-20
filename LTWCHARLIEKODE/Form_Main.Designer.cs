@@ -30,6 +30,7 @@ namespace LTWCHARLIEKODE
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuSystem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuServerConfig = new System.Windows.Forms.ToolStripMenuItem();
             this.menuChangePassword = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.menuLogout = new System.Windows.Forms.ToolStripMenuItem();
@@ -38,6 +39,8 @@ namespace LTWCHARLIEKODE
             this.btnManageUsers = new System.Windows.Forms.ToolStripMenuItem();
             this.btnManageRoles = new System.Windows.Forms.ToolStripMenuItem();
             this.menuBusiness = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnCheckInQR = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnEmailReminder = new System.Windows.Forms.ToolStripMenuItem();
             this.btnManageMembers = new System.Windows.Forms.ToolStripMenuItem();
             this.btnRegisterPackage = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCreateInvoice = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,6 +55,7 @@ namespace LTWCHARLIEKODE
             this.lblCurrentUser = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelSeparator = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblCurrentRole = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblExpiringAlert = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -74,6 +78,7 @@ namespace LTWCHARLIEKODE
             // menuSystem
             // 
             this.menuSystem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuServerConfig,
             this.menuChangePassword,
             this.toolStripSeparator1,
             this.menuLogout,
@@ -82,17 +87,24 @@ namespace LTWCHARLIEKODE
             this.menuSystem.Size = new System.Drawing.Size(85, 24);
             this.menuSystem.Text = "Hệ thống";
             // 
+            // menuServerConfig
+            // 
+            this.menuServerConfig.Name = "menuServerConfig";
+            this.menuServerConfig.Size = new System.Drawing.Size(260, 26);
+            this.menuServerConfig.Text = "⚙ Cấu hình Server (Database)";
+            this.menuServerConfig.Click += new System.EventHandler(this.menuServerConfig_Click);
+            // 
             // menuChangePassword
             // 
             this.menuChangePassword.Name = "menuChangePassword";
-            this.menuChangePassword.Size = new System.Drawing.Size(224, 26);
+            this.menuChangePassword.Size = new System.Drawing.Size(260, 26);
             this.menuChangePassword.Text = "Đổi mật khẩu";
             this.menuChangePassword.Click += new System.EventHandler(this.menuChangePassword_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(257, 6);
             // 
             // menuLogout
             // 
@@ -134,6 +146,8 @@ namespace LTWCHARLIEKODE
             // menuBusiness
             // 
             this.menuBusiness.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnCheckInQR,
+            this.btnEmailReminder,
             this.btnManageMembers,
             this.btnRegisterPackage,
             this.btnCreateInvoice,
@@ -142,24 +156,38 @@ namespace LTWCHARLIEKODE
             this.menuBusiness.Size = new System.Drawing.Size(91, 24);
             this.menuBusiness.Text = "Nghiệp vụ";
             // 
+            // btnCheckInQR
+            // 
+            this.btnCheckInQR.Name = "btnCheckInQR";
+            this.btnCheckInQR.Size = new System.Drawing.Size(260, 26);
+            this.btnCheckInQR.Text = "📷 Quét mã QR Check-in (Webcam)";
+            this.btnCheckInQR.Click += new System.EventHandler(this.btnCheckInQR_Click);
+            // 
+            // btnEmailReminder
+            // 
+            this.btnEmailReminder.Name = "btnEmailReminder";
+            this.btnEmailReminder.Size = new System.Drawing.Size(260, 26);
+            this.btnEmailReminder.Text = "✉ Gửi Email nhắc hạn gói tập";
+            this.btnEmailReminder.Click += new System.EventHandler(this.btnEmailReminder_Click);
+            // 
             // btnManageMembers
             // 
             this.btnManageMembers.Name = "btnManageMembers";
-            this.btnManageMembers.Size = new System.Drawing.Size(224, 26);
+            this.btnManageMembers.Size = new System.Drawing.Size(260, 26);
             this.btnManageMembers.Text = "Quản lý hội viên";
             this.btnManageMembers.Click += new System.EventHandler(this.btnManageMembers_Click);
             // 
             // btnRegisterPackage
             // 
             this.btnRegisterPackage.Name = "btnRegisterPackage";
-            this.btnRegisterPackage.Size = new System.Drawing.Size(224, 26);
+            this.btnRegisterPackage.Size = new System.Drawing.Size(260, 26);
             this.btnRegisterPackage.Text = "Đăng ký gói tập";
             this.btnRegisterPackage.Click += new System.EventHandler(this.btnRegisterPackage_Click);
             // 
             // btnCreateInvoice
             // 
             this.btnCreateInvoice.Name = "btnCreateInvoice";
-            this.btnCreateInvoice.Size = new System.Drawing.Size(224, 26);
+            this.btnCreateInvoice.Size = new System.Drawing.Size(260, 26);
             this.btnCreateInvoice.Text = "Danh sách hóa đơn";
             this.btnCreateInvoice.Click += new System.EventHandler(this.btnCreateInvoice_Click);
             // 
@@ -222,7 +250,8 @@ namespace LTWCHARLIEKODE
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblCurrentUser,
             this.toolStripStatusLabelSeparator,
-            this.lblCurrentRole});
+            this.lblCurrentRole,
+            this.lblExpiringAlert});
             this.statusStrip1.Location = new System.Drawing.Point(0, 527);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1008, 26);
@@ -248,6 +277,15 @@ namespace LTWCHARLIEKODE
             this.lblCurrentRole.Name = "lblCurrentRole";
             this.lblCurrentRole.Size = new System.Drawing.Size(55, 20);
             this.lblCurrentRole.Text = "Vai trò:";
+            // 
+            // lblExpiringAlert
+            // 
+            this.lblExpiringAlert.IsLink = true;
+            this.lblExpiringAlert.LinkColor = System.Drawing.Color.Crimson;
+            this.lblExpiringAlert.Name = "lblExpiringAlert";
+            this.lblExpiringAlert.Size = new System.Drawing.Size(220, 20);
+            this.lblExpiringAlert.Text = "  |  🔔 Kiểm tra hạn gói tập...";
+            this.lblExpiringAlert.Click += new System.EventHandler(this.lblExpiringAlert_Click);
             // 
             // Form_Main
             // 
@@ -276,6 +314,7 @@ namespace LTWCHARLIEKODE
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menuSystem;
+        private System.Windows.Forms.ToolStripMenuItem menuServerConfig;
         private System.Windows.Forms.ToolStripMenuItem menuChangePassword;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem menuLogout;
@@ -284,6 +323,8 @@ namespace LTWCHARLIEKODE
         private System.Windows.Forms.ToolStripMenuItem btnManageUsers;
         private System.Windows.Forms.ToolStripMenuItem btnManageRoles;
         private System.Windows.Forms.ToolStripMenuItem menuBusiness;
+        private System.Windows.Forms.ToolStripMenuItem btnCheckInQR;
+        private System.Windows.Forms.ToolStripMenuItem btnEmailReminder;
         private System.Windows.Forms.ToolStripMenuItem btnManageMembers;
         private System.Windows.Forms.ToolStripMenuItem btnRegisterPackage;
         private System.Windows.Forms.ToolStripMenuItem btnCreateInvoice;
@@ -298,5 +339,6 @@ namespace LTWCHARLIEKODE
         private System.Windows.Forms.ToolStripStatusLabel lblCurrentUser;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelSeparator;
         private System.Windows.Forms.ToolStripStatusLabel lblCurrentRole;
+        private System.Windows.Forms.ToolStripStatusLabel lblExpiringAlert;
     }
 }
