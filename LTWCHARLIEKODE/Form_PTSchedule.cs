@@ -14,7 +14,23 @@ namespace LTWCHARLIEKODE
         public Form_PTSchedule()
         {
             InitializeComponent();
-            _connectionString = "data source=.;initial catalog=GymManagementDB;integrated security=True;";
+            _connectionString = GetSqlConnectionString();
+        }
+
+        private string GetSqlConnectionString()
+        {
+            try
+            {
+                string connStr = System.Configuration.ConfigurationManager.ConnectionStrings["GymManagementDBEntities1"]?.ConnectionString;
+                if (!string.IsNullOrEmpty(connStr) && connStr.Contains("connection string=\""))
+                {
+                    int start = connStr.IndexOf("connection string=\"") + 19;
+                    int end = connStr.IndexOf("\"", start);
+                    return connStr.Substring(start, end - start);
+                }
+            }
+            catch { }
+            return "Server=.\\SQLEXPRESS;Database=GymManagementDB;Integrated Security=True;";
         }
 
         private void Form_PTSchedule_Load(object sender, EventArgs e)

@@ -230,10 +230,68 @@ BEGIN
     (N'Gói 1 Tháng', 299000, 30, 1),
     (N'Gói 3 Tháng', 807300, 90, 1),
     (N'Gói 6 Tháng', 1435200, 180, 1),
-    (N'Gói 12 Tháng', 2332200, 365, 1),
-    (N'Gói 1 Tháng', 2700000, 30, 1),
-    (N'Gói 3 Tháng', 7290000, 90, 1),
-    (N'Gói 6 Tháng', 12960000, 180, 1),
-    (N'Gói 12 Tháng', 21000000, 365, 1);
+    (N'Gói 12 Tháng', 2332200, 365, 1);
 END
 GO
+
+-- Thêm Huấn Luyện Viên (PT)
+IF NOT EXISTS (SELECT 1 FROM Trainers)
+BEGIN
+    INSERT INTO Trainers (FullName, Phone, Specialty) VALUES
+    (N'Nguyễn Văn Toàn', '0912345678', N'Gym & Tăng cơ'),
+    (N'Trần Minh Hoàng', '0923456789', N'Giảm cân & Cardio'),
+    (N'Lê Thị Hương', '0934567890', N'Yoga & Pilates'),
+    (N'Phạm Anh Tuấn', '0945678901', N'Boxing & Kickfit');
+END
+GO
+
+-- Thêm Hội Viên mẫu
+IF NOT EXISTS (SELECT 1 FROM Members)
+BEGIN
+    INSERT INTO Members (FullName, Phone, Email, QRCode, CreatedDate) VALUES
+    (N'Nguyễn Văn An', '0901112223', 'nguyenvanan@gmail.com', 'MEM-00001', GETDATE()),
+    (N'Trần Thị Bích', '0902223334', 'tranbich@gmail.com', 'MEM-00002', GETDATE()),
+    (N'Lê Hoàng Nam', '0903334445', 'hoangnam@gmail.com', 'MEM-00003', GETDATE()),
+    (N'Phạm Thị Mai', '0904445556', 'maipham@gmail.com', 'MEM-00004', GETDATE()),
+    (N'Đỗ Minh Trí', '0905556667', 'minhtri@gmail.com', 'MEM-00005', GETDATE()),
+    (N'Vũ Kim Ngân', '0906667778', 'kimngan@gmail.com', 'MEM-00006', GETDATE());
+END
+GO
+
+-- Gán gói tập cho một số hội viên
+IF NOT EXISTS (SELECT 1 FROM MemberPackages)
+BEGIN
+    DECLARE @pkgId INT = (SELECT TOP 1 PackageId FROM Packages);
+    DECLARE @tr1 INT = (SELECT TOP 1 TrainerId FROM Trainers);
+    DECLARE @m1 INT = (SELECT TOP 1 MemberId FROM Members ORDER BY MemberId);
+    DECLARE @m2 INT = (SELECT TOP 1 MemberId FROM Members WHERE MemberId > @m1 ORDER BY MemberId);
+
+    IF @pkgId IS NOT NULL AND @m1 IS NOT NULL
+    BEGIN
+        INSERT INTO MemberPackages (MemberId, PackageId, TrainerId, StartDate, EndDate, IsActive) VALUES
+        (@m1, @pkgId, @tr1, GETDATE(), DATEADD(day, 30, GETDATE()), 1);
+        
+        IF @m2 IS NOT NULL
+        BEGIN
+            INSERT INTO MemberPackages (MemberId, PackageId, TrainerId, StartDate, EndDate, IsActive) VALUES
+            (@m2, @pkgId, NULL, GETDATE(), DATEADD(day, 60, GETDATE()), 1);
+        END
+    END
+END
+GO
+
+-- Thêm Lịch tập mẫu
+IF NOT EXISTS (SELECT 1 FROM PTSchedules)
+BEGIN
+    DECLARE @mId INT = (SELECT TOP 1 MemberId FROM Members);
+    DECLARE @tId INT = (SELECT TOP 1 TrainerId FROM Trainers);
+
+    IF @mId IS NOT NULL AND @tId IS NOT NULL
+    BEGIN
+        INSERT INTO PTSchedules (MemberId, TrainerId, ScheduleDate, StartTime, EndTime, Status, Notes) VALUES
+        (@mId, @tId, CAST(GETDATE() AS DATE), '08:00:00', '09:00:00', N'Đã hoàn thành', N'Tập ngực và tay trước'),
+        (@mId, @tId, CAST(DATEADD(day, 1, GETDATE()) AS DATE), '14:00:00', '15:00:00', N'Đã lên lịch', N'Tập chân và đùi');
+    END
+END
+GO
+
