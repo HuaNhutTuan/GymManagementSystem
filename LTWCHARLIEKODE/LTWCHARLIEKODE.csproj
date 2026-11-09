@@ -78,6 +78,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EquipmentMaintenance.cs" />
+    <Compile Include="PTSchedules.cs" />
     <Compile Include="Equipments.cs">
       <DependentUpon>GymModel.tt</DependentUpon>
     </Compile>
@@ -86,6 +88,12 @@
     </Compile>
     <Compile Include="Form_Login.Designer.cs">
       <DependentUpon>Form_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Welcome.Designer.cs">
+      <DependentUpon>Form_Welcome.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_Main.cs">
       <SubType>Form</SubType>
@@ -105,6 +113,12 @@
     <Compile Include="Form_RoleManagement.Designer.cs">
       <DependentUpon>Form_RoleManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Repositories\PTScheduleRepository.cs" />
+    <Compile Include="Repositories\EquipmentRepository.cs" />
+    <Compile Include="Repositories\TrainerRepository.cs" />
+    <Compile Include="Repositories\MemberRepository.cs" />
+    <Compile Include="Repositories\InvoiceRepository.cs" />
+    <Compile Include="Repositories\PackageRepository.cs" />
     <Compile Include="Form_ChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>

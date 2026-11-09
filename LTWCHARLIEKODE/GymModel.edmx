@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
   <!-- EF Runtime content -->
   <edmx:Runtime>
@@ -13,6 +13,31 @@
           <Property Name="EquipmentName" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="Status" Type="nvarchar" MaxLength="50" />
           <Property Name="Quantity" Type="int" />
+        </EntityType>
+        <EntityType Name="EquipmentMaintenance">
+          <Key>
+            <PropertyRef Name="MaintenanceId" />
+          </Key>
+          <Property Name="MaintenanceId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EquipmentId" Type="int" Nullable="false" />
+          <Property Name="MaintenanceDate" Type="datetime" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Cost" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="PerformedBy" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="PTSchedules">
+          <Key>
+            <PropertyRef Name="ScheduleId" />
+          </Key>
+          <Property Name="ScheduleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MemberId" Type="int" Nullable="false" />
+          <Property Name="TrainerId" Type="int" Nullable="false" />
+          <Property Name="ScheduleDate" Type="date" Nullable="false" />
+          <Property Name="StartTime" Type="time" Precision="7" Nullable="false" />
+          <Property Name="EndTime" Type="time" Precision="7" Nullable="false" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Notes" Type="nvarchar" MaxLength="250" />
         </EntityType>
         <EntityType Name="InvoiceDetails">
           <Key>
@@ -233,6 +258,8 @@
         </Association>
         <EntityContainer Name="GymManagementDBModel1StoreContainer">
           <EntitySet Name="Equipments" EntityType="Self.Equipments" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EquipmentMaintenance" EntityType="Self.EquipmentMaintenance" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PTSchedules" EntityType="Self.PTSchedules" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="InvoiceDetails" EntityType="Self.InvoiceDetails" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Invoices" EntityType="Self.Invoices" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MemberPackages" EntityType="Self.MemberPackages" Schema="dbo" store:Type="Tables" />
@@ -297,6 +324,31 @@
           <Property Name="EquipmentName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Quantity" Type="Int32" />
+        </EntityType>
+        <EntityType Name="EquipmentMaintenance">
+          <Key>
+            <PropertyRef Name="MaintenanceId" />
+          </Key>
+          <Property Name="MaintenanceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EquipmentId" Type="Int32" Nullable="false" />
+          <Property Name="MaintenanceDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Cost" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PerformedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="PTSchedules">
+          <Key>
+            <PropertyRef Name="ScheduleId" />
+          </Key>
+          <Property Name="ScheduleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MemberId" Type="Int32" Nullable="false" />
+          <Property Name="TrainerId" Type="Int32" Nullable="false" />
+          <Property Name="ScheduleDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="StartTime" Type="Time" Nullable="false" />
+          <Property Name="EndTime" Type="Time" Nullable="false" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Notes" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="InvoiceDetails">
           <Key>
@@ -507,6 +559,8 @@
         </Association>
         <EntityContainer Name="GymManagementDBEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Equipments" EntityType="Self.Equipments" />
+          <EntitySet Name="EquipmentMaintenance" EntityType="Self.EquipmentMaintenance" />
+          <EntitySet Name="PTSchedules" EntityType="Self.PTSchedules" />
           <EntitySet Name="InvoiceDetails" EntityType="Self.InvoiceDetails" />
           <EntitySet Name="Invoices" EntityType="Self.Invoices" />
           <EntitySet Name="MemberPackages" EntityType="Self.MemberPackages" />
@@ -566,6 +620,33 @@
                 <ScalarProperty Name="EquipmentName" ColumnName="EquipmentName" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EquipmentMaintenance">
+            <EntityTypeMapping TypeName="GymManagementDBModel1.EquipmentMaintenance">
+              <MappingFragment StoreEntitySet="EquipmentMaintenance">
+                <ScalarProperty Name="MaintenanceId" ColumnName="MaintenanceId" />
+                <ScalarProperty Name="EquipmentId" ColumnName="EquipmentId" />
+                <ScalarProperty Name="MaintenanceDate" ColumnName="MaintenanceDate" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Cost" ColumnName="Cost" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="PerformedBy" ColumnName="PerformedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PTSchedules">
+            <EntityTypeMapping TypeName="GymManagementDBModel1.PTSchedules">
+              <MappingFragment StoreEntitySet="PTSchedules">
+                <ScalarProperty Name="ScheduleId" ColumnName="ScheduleId" />
+                <ScalarProperty Name="MemberId" ColumnName="MemberId" />
+                <ScalarProperty Name="TrainerId" ColumnName="TrainerId" />
+                <ScalarProperty Name="ScheduleDate" ColumnName="ScheduleDate" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

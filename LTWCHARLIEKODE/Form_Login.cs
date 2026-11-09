@@ -79,7 +79,12 @@ namespace LTWCHARLIEKODE
                         UserSession.RoleName = role != null ? role.RoleName : "";
                     }
 
-                    MessageBox.Show($"Đăng nhập thành công! Chào mừng {user.FullName} ({UserSession.RoleName})",
+                    string greetingRole = UserSession.RoleId == 1 ? "Quản trị viên (Admin)" :
+                                          UserSession.RoleId == 4 ? "Quý khách hàng / Hội viên" :
+                                          UserSession.RoleId == 2 ? "Nhân viên Lễ tân" :
+                                          UserSession.RoleId == 3 ? "Huấn luyện viên (PT)" : UserSession.RoleName;
+
+                    MessageBox.Show($"Đăng nhập thành công!\n\nChào mừng {greetingRole}: {user.FullName} ({user.Username}) đã đăng nhập vào Hệ thống!",
                                     "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // 5. Mở Form_Main

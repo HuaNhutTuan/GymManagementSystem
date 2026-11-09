@@ -30,6 +30,7 @@ namespace LTWCHARLIEKODE
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuSystem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuWelcome = new System.Windows.Forms.ToolStripMenuItem();
             this.menuServerConfig = new System.Windows.Forms.ToolStripMenuItem();
             this.menuChangePassword = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -78,6 +79,7 @@ namespace LTWCHARLIEKODE
             // menuSystem
             // 
             this.menuSystem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuWelcome,
             this.menuServerConfig,
             this.menuChangePassword,
             this.toolStripSeparator1,
@@ -86,7 +88,14 @@ namespace LTWCHARLIEKODE
             this.menuSystem.Name = "menuSystem";
             this.menuSystem.Size = new System.Drawing.Size(85, 24);
             this.menuSystem.Text = "Hệ thống";
+                        // 
+            // menuWelcome
             // 
+            this.menuWelcome.Name = "menuWelcome";
+            this.menuWelcome.Size = new System.Drawing.Size(260, 26);
+            this.menuWelcome.Text = "🏠 Màn hình chào mừng (Trang chủ)";
+            this.menuWelcome.Click += new System.EventHandler(this.menuWelcome_Click);
+// 
             // menuServerConfig
             // 
             this.menuServerConfig.Name = "menuServerConfig";
@@ -314,6 +323,7 @@ namespace LTWCHARLIEKODE
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menuSystem;
+        private System.Windows.Forms.ToolStripMenuItem menuWelcome;
         private System.Windows.Forms.ToolStripMenuItem menuServerConfig;
         private System.Windows.Forms.ToolStripMenuItem menuChangePassword;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
