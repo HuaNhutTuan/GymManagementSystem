@@ -257,7 +257,7 @@ namespace LTWCHARLIEKODE
                         <p style='margin-top: 25px;'>Trân trọng,<br/><b>Ban Quản Lý Gym & Fitness</b></p>
                     </div>
                     <div class='footer'>
-                        <p>Email này được gửi tự động từ Hệ thống Quản lý Phòng Gym.<br/>Địa chỉ: TP. Hồ Chí Minh | Hotline: 1900 1234</p>
+                        <p>Email này được gửi tự động từ Hệ thống Quản lý Phòng Gym.<br/>Địa chỉ: TP. Hồ Chí Minh | Hotline: 0818854165 | Email: tuannhut419@gmail.com</p>
                     </div>
                 </div>
             </body>

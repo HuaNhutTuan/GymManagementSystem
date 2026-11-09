@@ -254,7 +254,7 @@ namespace LTWCHARLIEKODE
             y += 30;
             g.DrawString("Địa chỉ: 123 Đường Thể Thao, Quận 1, TP. Hồ Chí Minh", fontSub, brush, x, y);
             y += 20;
-            g.DrawString("Hotline: 1900 6868 | Email: contact@gymfitness.com", fontSub, brush, x, y);
+            g.DrawString("Hotline: 0818854165 | Email: tuannhut419@gmail.com", fontSub, brush, x, y);
             y += 30;
             g.DrawLine(penThick, x, y, x + width, y);
             y += 20;
@@ -312,24 +312,43 @@ namespace LTWCHARLIEKODE
                 stt++;
             }
 
-            y += 10;
-            // 5. Tổng thanh toán
-            g.DrawString($"Tổng tiền thanh toán:", fontHeader, brush, x + 350, y);
-            g.DrawString($"{_currentSelectedInvoice.TotalAmount:N0} VNĐ", new Font("Segoe UI", 16, FontStyle.Bold), new SolidBrush(Color.FromArgb(192, 0, 0)), x + 560, y);
+            y += 15;
+            // 5. Tổng thanh toán (Canh phải theo bảng, chống đè chữ)
+            string labelTotal = "Tổng tiền thanh toán: ";
+            string amountStr = $"{_currentSelectedInvoice.TotalAmount:N0} VNĐ";
+            Font fontAmount = new Font("Segoe UI", 16, FontStyle.Bold);
+
+            SizeF labelSize = g.MeasureString(labelTotal, fontHeader);
+            SizeF amountSize = g.MeasureString(amountStr, fontAmount);
+
+            float totalBlockWidth = labelSize.Width + amountSize.Width;
+            float totalStartX = x + width - totalBlockWidth;
+
+            g.DrawString(labelTotal, fontHeader, brush, totalStartX, y);
+            g.DrawString(amountStr, fontAmount, new SolidBrush(Color.FromArgb(192, 0, 0)), totalStartX + labelSize.Width, y);
             y += 35;
             g.DrawString($"(Số tiền viết bằng chữ: {NumberToWords((long)_currentSelectedInvoice.TotalAmount)} đồng)", fontSmallItalic, brush, x, y);
-            y += 50;
+            y += 45;
 
-            // 6. Chữ ký xác nhận
-            g.DrawString("Người nộp tiền", fontBold, brush, x + 80, y);
-            g.DrawString("Thu ngân / Người lập phiếu", fontBold, brush, x + 480, y);
-            y += 20;
-            g.DrawString("(Ký, ghi rõ họ tên)", fontSmallItalic, brush, x + 70, y);
-            g.DrawString("(Ký, ghi rõ họ tên)", fontSmallItalic, brush, x + 500, y);
-            y += 80;
+            // 6. Chữ ký xác nhận cân đối 2 bên
+            float colSignWidth = width / 2f;
+            RectangleF rectSignLeft = new RectangleF(x, y, colSignWidth, 22);
+            RectangleF rectSignRight = new RectangleF(x + colSignWidth, y, colSignWidth, 22);
 
-            g.DrawString(memberName, fontBold, brush, x + 80, y);
-            g.DrawString(cashierName, fontBold, brush, x + 500, y);
+            g.DrawString("Người nộp tiền", fontBold, brush, rectSignLeft, centerFormat);
+            g.DrawString("Thu ngân / Người lập phiếu", fontBold, brush, rectSignRight, centerFormat);
+            y += 22;
+
+            rectSignLeft.Y = y;
+            rectSignRight.Y = y;
+            g.DrawString("(Ký, ghi rõ họ tên)", fontSmallItalic, brush, rectSignLeft, centerFormat);
+            g.DrawString("(Ký, ghi rõ họ tên)", fontSmallItalic, brush, rectSignRight, centerFormat);
+            y += 75;
+
+            rectSignLeft.Y = y;
+            rectSignRight.Y = y;
+            g.DrawString(memberName, fontBold, brush, rectSignLeft, centerFormat);
+            g.DrawString(cashierName, fontBold, brush, rectSignRight, centerFormat);
             y += 40;
 
             // Footer lời cảm ơn
