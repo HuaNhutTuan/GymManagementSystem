@@ -366,3 +366,8 @@ FodyWeavers.xsd
 nuget.exe
 SetupOutput/
 EmailConfig.xml
+
+# Reports, Presentations & Demo Scripts
+*.docx
+*.pptx
+*.pdf
