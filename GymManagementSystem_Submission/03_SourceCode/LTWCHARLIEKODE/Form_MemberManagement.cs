@@ -351,8 +351,8 @@ namespace LTWCHARLIEKODE
             dgvMembers.ScrollBars = ScrollBars.Both;
             dgvMembers.ColumnHeadersHeight = 38;
             dgvMembers.RowTemplate.Height = 34;
-            dgvMembers.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
-            dgvMembers.DefaultCellStyle.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular);
+            dgvMembers.ColumnHeadersDefaultCellStyle.Font = new Font("Tahoma", 9.5F, FontStyle.Bold);
+            dgvMembers.DefaultCellStyle.Font = new Font("Tahoma", 9.5F, FontStyle.Regular);
             dgvMembers.DefaultCellStyle.WrapMode = DataGridViewTriState.False;
             dgvMembers.ColumnHeadersDefaultCellStyle.WrapMode = DataGridViewTriState.False;
             dgvMembers.AllowUserToResizeColumns = true;
@@ -440,8 +440,8 @@ namespace LTWCHARLIEKODE
                     dgvMemberPackages.ScrollBars = ScrollBars.Both;
                     dgvMemberPackages.ColumnHeadersHeight = 36;
                     dgvMemberPackages.RowTemplate.Height = 32;
-                    dgvMemberPackages.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-                    dgvMemberPackages.DefaultCellStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+                    dgvMemberPackages.ColumnHeadersDefaultCellStyle.Font = new Font("Tahoma", 9F, FontStyle.Bold);
+                    dgvMemberPackages.DefaultCellStyle.Font = new Font("Tahoma", 9F, FontStyle.Regular);
                     dgvMemberPackages.DefaultCellStyle.WrapMode = DataGridViewTriState.False;
                     dgvMemberPackages.AllowUserToResizeColumns = true;
 

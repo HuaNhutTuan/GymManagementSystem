@@ -67,7 +67,7 @@ namespace LTWCHARLIEKODE
             // 
             this.lblTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
             this.lblTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
             this.lblTitle.Location = new System.Drawing.Point(0, 0);
             this.lblTitle.Name = "lblTitle";
@@ -81,7 +81,7 @@ namespace LTWCHARLIEKODE
             this.tabEmail.Controls.Add(this.tabMembers);
             this.tabEmail.Controls.Add(this.tabSmtp);
             this.tabEmail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabEmail.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabEmail.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabEmail.Location = new System.Drawing.Point(0, 45);
             this.tabEmail.Name = "tabEmail";
             this.tabEmail.SelectedIndex = 0;
@@ -153,7 +153,7 @@ namespace LTWCHARLIEKODE
             // lblLogTitle
             // 
             this.lblLogTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblLogTitle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogTitle.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogTitle.Location = new System.Drawing.Point(0, 0);
             this.lblLogTitle.Name = "lblLogTitle";
             this.lblLogTitle.Size = new System.Drawing.Size(970, 20);
@@ -186,7 +186,7 @@ namespace LTWCHARLIEKODE
             // 
             // btnDeselectAll
             // 
-            this.btnDeselectAll.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeselectAll.Font = new System.Drawing.Font("Tahoma", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeselectAll.Location = new System.Drawing.Point(440, 12);
             this.btnDeselectAll.Name = "btnDeselectAll";
             this.btnDeselectAll.Size = new System.Drawing.Size(75, 27);
@@ -197,7 +197,7 @@ namespace LTWCHARLIEKODE
             // 
             // btnSelectAll
             // 
-            this.btnSelectAll.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelectAll.Font = new System.Drawing.Font("Tahoma", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSelectAll.Location = new System.Drawing.Point(355, 12);
             this.btnSelectAll.Name = "btnSelectAll";
             this.btnSelectAll.Size = new System.Drawing.Size(80, 27);
@@ -211,7 +211,7 @@ namespace LTWCHARLIEKODE
             this.btnSendSelected.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.btnSendSelected.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSendSelected.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSendSelected.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSendSelected.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSendSelected.ForeColor = System.Drawing.Color.White;
             this.btnSendSelected.Location = new System.Drawing.Point(530, 8);
             this.btnSendSelected.Name = "btnSendSelected";
@@ -226,13 +226,13 @@ namespace LTWCHARLIEKODE
             this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
             this.btnRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.ForeColor = System.Drawing.Color.White;
             this.btnRefresh.Location = new System.Drawing.Point(245, 10);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(95, 30);
             this.btnRefresh.TabIndex = 3;
-            this.btnRefresh.Text = "🔄 Quét Lại";
+            this.btnRefresh.Text = "Quét Lại";
             this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
@@ -255,7 +255,7 @@ namespace LTWCHARLIEKODE
             // lblFilter
             // 
             this.lblFilter.AutoSize = true;
-            this.lblFilter.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFilter.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFilter.Location = new System.Drawing.Point(10, 16);
             this.lblFilter.Name = "lblFilter";
             this.lblFilter.Size = new System.Drawing.Size(53, 17);
@@ -265,7 +265,7 @@ namespace LTWCHARLIEKODE
             // lblSummary
             // 
             this.lblSummary.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblSummary.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSummary.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSummary.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.lblSummary.Location = new System.Drawing.Point(740, 10);
             this.lblSummary.Name = "lblSummary";
@@ -293,7 +293,7 @@ namespace LTWCHARLIEKODE
             this.grpTest.Controls.Add(this.btnTestSmtp);
             this.grpTest.Controls.Add(this.txtTestEmail);
             this.grpTest.Controls.Add(this.lblTestEmail);
-            this.grpTest.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpTest.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpTest.Location = new System.Drawing.Point(20, 355);
             this.grpTest.Name = "grpTest";
             this.grpTest.Size = new System.Drawing.Size(700, 120);
@@ -303,7 +303,7 @@ namespace LTWCHARLIEKODE
             // 
             // lblTestStatus
             // 
-            this.lblTestStatus.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTestStatus.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTestStatus.ForeColor = System.Drawing.Color.Gray;
             this.lblTestStatus.Location = new System.Drawing.Point(20, 75);
             this.lblTestStatus.Name = "lblTestStatus";
@@ -316,7 +316,7 @@ namespace LTWCHARLIEKODE
             this.btnTestSmtp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.btnTestSmtp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTestSmtp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTestSmtp.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTestSmtp.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTestSmtp.ForeColor = System.Drawing.Color.White;
             this.btnTestSmtp.Location = new System.Drawing.Point(475, 30);
             this.btnTestSmtp.Name = "btnTestSmtp";
@@ -328,7 +328,7 @@ namespace LTWCHARLIEKODE
             // 
             // txtTestEmail
             // 
-            this.txtTestEmail.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTestEmail.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTestEmail.Location = new System.Drawing.Point(170, 34);
             this.txtTestEmail.Name = "txtTestEmail";
             this.txtTestEmail.Size = new System.Drawing.Size(285, 24);
@@ -337,7 +337,7 @@ namespace LTWCHARLIEKODE
             // lblTestEmail
             // 
             this.lblTestEmail.AutoSize = true;
-            this.lblTestEmail.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTestEmail.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTestEmail.Location = new System.Drawing.Point(20, 37);
             this.lblTestEmail.Name = "lblTestEmail";
             this.lblTestEmail.Size = new System.Drawing.Size(134, 17);
@@ -349,13 +349,13 @@ namespace LTWCHARLIEKODE
             this.btnSaveSmtp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
             this.btnSaveSmtp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSaveSmtp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveSmtp.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveSmtp.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveSmtp.ForeColor = System.Drawing.Color.White;
             this.btnSaveSmtp.Location = new System.Drawing.Point(20, 305);
             this.btnSaveSmtp.Name = "btnSaveSmtp";
             this.btnSaveSmtp.Size = new System.Drawing.Size(190, 36);
             this.btnSaveSmtp.TabIndex = 1;
-            this.btnSaveSmtp.Text = "💾 Lưu Cấu Hình SMTP";
+            this.btnSaveSmtp.Text = "Lưu Cấu Hình SMTP";
             this.btnSaveSmtp.UseVisualStyleBackColor = false;
             this.btnSaveSmtp.Click += new System.EventHandler(this.btnSaveSmtp_Click);
             // 
@@ -373,7 +373,7 @@ namespace LTWCHARLIEKODE
             this.grpSmtp.Controls.Add(this.lblSmtpPort);
             this.grpSmtp.Controls.Add(this.txtSmtpHost);
             this.grpSmtp.Controls.Add(this.lblSmtpHost);
-            this.grpSmtp.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpSmtp.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpSmtp.Location = new System.Drawing.Point(20, 20);
             this.grpSmtp.Name = "grpSmtp";
             this.grpSmtp.Size = new System.Drawing.Size(700, 270);
@@ -383,7 +383,7 @@ namespace LTWCHARLIEKODE
             // 
             // lblNote
             // 
-            this.lblNote.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNote.Font = new System.Drawing.Font("Tahoma", 8.5F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNote.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.lblNote.Location = new System.Drawing.Point(170, 195);
             this.lblNote.Name = "lblNote";
@@ -398,7 +398,7 @@ namespace LTWCHARLIEKODE
             this.chkSmtpSsl.AutoSize = true;
             this.chkSmtpSsl.Checked = true;
             this.chkSmtpSsl.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkSmtpSsl.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkSmtpSsl.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkSmtpSsl.Location = new System.Drawing.Point(450, 32);
             this.chkSmtpSsl.Name = "chkSmtpSsl";
             this.chkSmtpSsl.Size = new System.Drawing.Size(126, 21);
@@ -408,7 +408,7 @@ namespace LTWCHARLIEKODE
             // 
             // txtDisplayName
             // 
-            this.txtDisplayName.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDisplayName.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDisplayName.Location = new System.Drawing.Point(170, 160);
             this.txtDisplayName.Name = "txtDisplayName";
             this.txtDisplayName.Size = new System.Drawing.Size(460, 24);
@@ -418,7 +418,7 @@ namespace LTWCHARLIEKODE
             // lblDisplayName
             // 
             this.lblDisplayName.AutoSize = true;
-            this.lblDisplayName.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDisplayName.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDisplayName.Location = new System.Drawing.Point(20, 163);
             this.lblDisplayName.Name = "lblDisplayName";
             this.lblDisplayName.Size = new System.Drawing.Size(107, 17);
@@ -427,7 +427,7 @@ namespace LTWCHARLIEKODE
             // 
             // txtSenderPassword
             // 
-            this.txtSenderPassword.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenderPassword.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenderPassword.Location = new System.Drawing.Point(170, 120);
             this.txtSenderPassword.Name = "txtSenderPassword";
             this.txtSenderPassword.PasswordChar = '●';
@@ -437,7 +437,7 @@ namespace LTWCHARLIEKODE
             // lblSenderPassword
             // 
             this.lblSenderPassword.AutoSize = true;
-            this.lblSenderPassword.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSenderPassword.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSenderPassword.Location = new System.Drawing.Point(20, 123);
             this.lblSenderPassword.Name = "lblSenderPassword";
             this.lblSenderPassword.Size = new System.Drawing.Size(147, 17);
@@ -446,7 +446,7 @@ namespace LTWCHARLIEKODE
             // 
             // txtSenderEmail
             // 
-            this.txtSenderEmail.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenderEmail.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenderEmail.Location = new System.Drawing.Point(170, 77);
             this.txtSenderEmail.Name = "txtSenderEmail";
             this.txtSenderEmail.Size = new System.Drawing.Size(460, 24);
@@ -455,7 +455,7 @@ namespace LTWCHARLIEKODE
             // lblSenderEmail
             // 
             this.lblSenderEmail.AutoSize = true;
-            this.lblSenderEmail.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSenderEmail.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSenderEmail.Location = new System.Drawing.Point(20, 80);
             this.lblSenderEmail.Name = "lblSenderEmail";
             this.lblSenderEmail.Size = new System.Drawing.Size(107, 17);
@@ -464,7 +464,7 @@ namespace LTWCHARLIEKODE
             // 
             // txtSmtpPort
             // 
-            this.txtSmtpPort.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSmtpPort.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSmtpPort.Location = new System.Drawing.Point(365, 30);
             this.txtSmtpPort.Name = "txtSmtpPort";
             this.txtSmtpPort.Size = new System.Drawing.Size(65, 24);
@@ -474,7 +474,7 @@ namespace LTWCHARLIEKODE
             // lblSmtpPort
             // 
             this.lblSmtpPort.AutoSize = true;
-            this.lblSmtpPort.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSmtpPort.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSmtpPort.Location = new System.Drawing.Point(325, 33);
             this.lblSmtpPort.Name = "lblSmtpPort";
             this.lblSmtpPort.Size = new System.Drawing.Size(35, 17);
@@ -483,7 +483,7 @@ namespace LTWCHARLIEKODE
             // 
             // txtSmtpHost
             // 
-            this.txtSmtpHost.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSmtpHost.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSmtpHost.Location = new System.Drawing.Point(170, 30);
             this.txtSmtpHost.Name = "txtSmtpHost";
             this.txtSmtpHost.Size = new System.Drawing.Size(140, 24);
@@ -493,7 +493,7 @@ namespace LTWCHARLIEKODE
             // lblSmtpHost
             // 
             this.lblSmtpHost.AutoSize = true;
-            this.lblSmtpHost.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSmtpHost.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSmtpHost.Location = new System.Drawing.Point(20, 33);
             this.lblSmtpHost.Name = "lblSmtpHost";
             this.lblSmtpHost.Size = new System.Drawing.Size(107, 17);
@@ -508,7 +508,7 @@ namespace LTWCHARLIEKODE
             this.ClientSize = new System.Drawing.Size(984, 600);
             this.Controls.Add(this.tabEmail);
             this.Controls.Add(this.lblTitle);
-            this.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Form_EmailReminder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

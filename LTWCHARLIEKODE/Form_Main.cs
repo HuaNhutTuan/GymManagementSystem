@@ -321,7 +321,7 @@ namespace LTWCHARLIEKODE
                 var list = await System.Threading.Tasks.Task.Run(() => EmailReminderService.GetExpiringMembers(5));
                 if (list != null && list.Count > 0)
                 {
-                    lblExpiringAlert.Text = $"  |  🔔 Có {list.Count} gói tập sắp hết hạn (< 5 ngày). Nhấn để xem & gửi Email!";
+                    lblExpiringAlert.Text = $"  |  Có {list.Count} gói tập sắp hết hạn (< 5 ngày). Nhấn để xem & gửi Email!";
                     lblExpiringAlert.LinkColor = Color.Crimson;
                 }
                 else
@@ -332,7 +332,7 @@ namespace LTWCHARLIEKODE
             }
             catch
             {
-                lblExpiringAlert.Text = "  |  🔔 Nhấn để kiểm tra danh sách sắp hết hạn";
+                lblExpiringAlert.Text = "  |  Nhấn để kiểm tra danh sách sắp hết hạn";
             }
         }
 

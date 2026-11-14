@@ -257,11 +257,11 @@ namespace LTWCHARLIEKODE
         private void PrintReportPage(object sender, PrintPageEventArgs e)
         {
             Graphics g = e.Graphics;
-            Font fontTitle = new Font("Segoe UI", 16, FontStyle.Bold);
-            Font fontHeader = new Font("Segoe UI", 12, FontStyle.Bold);
-            Font fontBold = new Font("Segoe UI", 10, FontStyle.Bold);
-            Font fontNormal = new Font("Segoe UI", 10, FontStyle.Regular);
-            Font fontItalic = new Font("Segoe UI", 9, FontStyle.Italic);
+            Font fontTitle = new Font("Tahoma", 16, FontStyle.Bold);
+            Font fontHeader = new Font("Tahoma", 12, FontStyle.Bold);
+            Font fontBold = new Font("Tahoma", 10, FontStyle.Bold);
+            Font fontNormal = new Font("Tahoma", 10, FontStyle.Regular);
+            Font fontItalic = new Font("Tahoma", 9, FontStyle.Italic);
 
             Brush brush = Brushes.Black;
             Pen pen = new Pen(Color.FromArgb(100, 100, 100), 1);

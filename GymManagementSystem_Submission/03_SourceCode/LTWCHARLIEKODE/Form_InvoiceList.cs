@@ -235,11 +235,11 @@ namespace LTWCHARLIEKODE
         private void PrintInvoicePage(object sender, PrintPageEventArgs e)
         {
             Graphics g = e.Graphics;
-            Font fontHeader = new Font("Segoe UI", 16, FontStyle.Bold);
-            Font fontSub = new Font("Segoe UI", 10, FontStyle.Regular);
-            Font fontBold = new Font("Segoe UI", 10, FontStyle.Bold);
-            Font fontNormal = new Font("Segoe UI", 10, FontStyle.Regular);
-            Font fontSmallItalic = new Font("Segoe UI", 9, FontStyle.Italic);
+            Font fontHeader = new Font("Tahoma", 16, FontStyle.Bold);
+            Font fontSub = new Font("Tahoma", 10, FontStyle.Regular);
+            Font fontBold = new Font("Tahoma", 10, FontStyle.Bold);
+            Font fontNormal = new Font("Tahoma", 10, FontStyle.Regular);
+            Font fontSmallItalic = new Font("Tahoma", 9, FontStyle.Italic);
 
             Brush brush = Brushes.Black;
             Pen pen = new Pen(Color.FromArgb(80, 80, 80), 1);
@@ -261,7 +261,7 @@ namespace LTWCHARLIEKODE
 
             // 2. Tiêu đề Phiếu Thu
             StringFormat centerFormat = new StringFormat { Alignment = StringAlignment.Center };
-            g.DrawString("PHIẾU THU TIỀN DỊCH VỤ / HÓA ĐƠN", new Font("Segoe UI", 14, FontStyle.Bold), brush, new RectangleF(x, y, width, 25), centerFormat);
+            g.DrawString("PHIẾU THU TIỀN DỊCH VỤ / HÓA ĐƠN", new Font("Tahoma", 14, FontStyle.Bold), brush, new RectangleF(x, y, width, 25), centerFormat);
             y += 25;
             g.DrawString($"Mã HĐ: HD-{_currentSelectedInvoice.InvoiceId:D5}", fontBold, brush, new RectangleF(x, y, width, 20), centerFormat);
             y += 35;
@@ -316,7 +316,7 @@ namespace LTWCHARLIEKODE
             // 5. Tổng thanh toán (Canh phải theo bảng, chống đè chữ)
             string labelTotal = "Tổng tiền thanh toán: ";
             string amountStr = $"{_currentSelectedInvoice.TotalAmount:N0} VNĐ";
-            Font fontAmount = new Font("Segoe UI", 16, FontStyle.Bold);
+            Font fontAmount = new Font("Tahoma", 16, FontStyle.Bold);
 
             SizeF labelSize = g.MeasureString(labelTotal, fontHeader);
             SizeF amountSize = g.MeasureString(amountStr, fontAmount);

@@ -37,7 +37,7 @@ namespace LTWCHARLIEKODE
             {
                 case 1:
                     // ADMIN (QUẢN TRỊ VIÊN)
-                    lblGreetingHeader.Text = "👑 CHÀO MỪNG QUẢN TRỊ VIÊN HỆ THỐNG (ADMIN)";
+                    lblGreetingHeader.Text = "CHÀO MỪNG QUẢN TRỊ VIÊN HỆ THỐNG (ADMIN)";
                     lblGreetingHeader.ForeColor = Color.FromArgb(255, 230, 100);
                     lblGreetingSub.Text = $"Xin chào Quản trị viên: {fullName} ({username})  |  Vai trò: Toàn quyền Quản trị  |  {dateStr}";
                     lblQuote.Text = "★ Chúc bạn một ngày quản trị và điều hành trung tâm thể thao đạt hiệu quả tối ưu!";
@@ -55,7 +55,7 @@ namespace LTWCHARLIEKODE
 
                 case 4:
                     // KHÁCH HÀNG / HỘI VIÊN
-                    lblGreetingHeader.Text = "🎉 CHÀO MỪNG QUÝ KHÁCH HÀNG / HỘI VIÊN";
+                    lblGreetingHeader.Text = "CHÀO MỪNG QUÝ KHÁCH HÀNG / HỘI VIÊN";
                     lblGreetingHeader.ForeColor = Color.FromArgb(120, 220, 255);
                     lblGreetingSub.Text = $"Kính chào Quý khách: {fullName} ({username})  |  {dateStr}";
                     lblQuote.Text = "★ \"Chúc quý khách có những buổi tập tràn đầy năng lượng và đạt được vóc dáng mong ước!\"";
@@ -67,15 +67,15 @@ namespace LTWCHARLIEKODE
                     btnActionRevenue.Visible = false;
 
                     // Tùy biến nội dung các nút dành cho khách hàng
-                    btnActionCheckIn.Text = "📷 Điểm danh QR\r\n\r\nQuét mã QR cá nhân để vào phòng tập luyện";
-                    btnActionPTSchedule.Text = "📅 Lịch tập của Tôi\r\n\r\nXem lịch hẹn tập cùng Huấn luyện viên cá nhân";
-                    btnActionCatalog.Text = "🏋️ Khám phá Gói tập\r\n\r\nXem bảng giá và quyền lợi các gói Gym & Fitness";
-                    btnActionPassword.Text = "🔑 Đổi Mật khẩu\r\n\r\nCập nhật mật khẩu bảo vệ tài khoản hội viên";
+                    btnActionCheckIn.Text = "Điểm danh QR\r\n\r\nQuét mã QR cá nhân để vào phòng tập luyện";
+                    btnActionPTSchedule.Text = "Lịch tập của Tôi\r\n\r\nXem lịch hẹn tập cùng Huấn luyện viên cá nhân";
+                    btnActionCatalog.Text = "Khám phá Gói tập\r\n\r\nXem bảng giá và quyền lợi các gói Gym & Fitness";
+                    btnActionPassword.Text = "Đổi Mật khẩu\r\n\r\nCập nhật mật khẩu bảo vệ tài khoản hội viên";
                     break;
 
                 case 2:
                     // NHÂN VIÊN LỄ TÂN
-                    lblGreetingHeader.Text = "👋 CHÀO MỪNG NHÂN VIÊN LỄ TÂN";
+                    lblGreetingHeader.Text = "CHÀO MỪNG NHÂN VIÊN LỄ TÂN";
                     lblGreetingHeader.ForeColor = Color.FromArgb(180, 240, 160);
                     lblGreetingSub.Text = $"Xin chào: {fullName} ({username})  |  Bộ phận Lễ tân & Chăm sóc khách hàng  |  {dateStr}";
                     lblQuote.Text = "★ Nụ cười và sự tận tâm của bạn mang lại trải nghiệm tuyệt vời nhất cho từng hội viên!";
@@ -85,7 +85,7 @@ namespace LTWCHARLIEKODE
 
                 case 3:
                     // HUẤN LUYỆN VIÊN (PT)
-                    lblGreetingHeader.Text = "💪 CHÀO MỪNG HUẤN LUYỆN VIÊN CÁ NHÂN (PT)";
+                    lblGreetingHeader.Text = "CHÀO MỪNG HUẤN LUYỆN VIÊN CÁ NHÂN (PT)";
                     lblGreetingHeader.ForeColor = Color.FromArgb(255, 180, 100);
                     lblGreetingSub.Text = $"Xin chào HLV: {fullName} ({username})  |  Đội ngũ Huấn luyện viên Chuyên nghiệp  |  {dateStr}";
                     lblQuote.Text = "★ Đồng hành và truyền cảm hứng bứt phá giới hạn thể chất đến từng hội viên!";
@@ -93,12 +93,12 @@ namespace LTWCHARLIEKODE
                     btnActionRevenue.Visible = false;
                     btnActionInvoices.Visible = false;
                     btnActionPackages.Visible = false;
-                    btnActionPTSchedule.Text = "📅 Lịch dạy Huấn luyện\r\n\r\nKiểm tra lịch dạy hôm nay và danh sách học viên";
+                    btnActionPTSchedule.Text = "Lịch dạy Huấn luyện\r\n\r\nKiểm tra lịch dạy hôm nay và danh sách học viên";
                     break;
 
                 default:
                     // Mặc định
-                    lblGreetingHeader.Text = "🎉 CHÀO MỪNG ĐẾN VỚI HỆ THỐNG GYM & FITNESS";
+                    lblGreetingHeader.Text = "CHÀO MỪNG ĐẾN VỚI HỆ THỐNG GYM & FITNESS";
                     lblGreetingSub.Text = $"Xin chào: {fullName}  |  {dateStr}";
                     lblQuote.Text = "★ Chúc bạn một ngày tập luyện và làm việc tràn đầy năng lượng!";
                     break;

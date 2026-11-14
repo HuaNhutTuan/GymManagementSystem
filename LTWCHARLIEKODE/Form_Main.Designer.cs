@@ -93,7 +93,7 @@ namespace LTWCHARLIEKODE
             // 
             this.menuWelcome.Name = "menuWelcome";
             this.menuWelcome.Size = new System.Drawing.Size(260, 26);
-            this.menuWelcome.Text = "🏠 Màn hình chào mừng (Trang chủ)";
+            this.menuWelcome.Text = "Màn hình chào mừng (Trang chủ)";
             this.menuWelcome.Click += new System.EventHandler(this.menuWelcome_Click);
 // 
             // menuServerConfig
@@ -169,7 +169,7 @@ namespace LTWCHARLIEKODE
             // 
             this.btnCheckInQR.Name = "btnCheckInQR";
             this.btnCheckInQR.Size = new System.Drawing.Size(260, 26);
-            this.btnCheckInQR.Text = "📷 Quét mã QR Check-in (Webcam)";
+            this.btnCheckInQR.Text = "Quét mã QR Check-in (Webcam)";
             this.btnCheckInQR.Click += new System.EventHandler(this.btnCheckInQR_Click);
             // 
             // btnEmailReminder
@@ -269,7 +269,7 @@ namespace LTWCHARLIEKODE
             // 
             // lblCurrentUser
             // 
-            this.lblCurrentUser.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrentUser.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCurrentUser.Name = "lblCurrentUser";
             this.lblCurrentUser.Size = new System.Drawing.Size(92, 20);
             this.lblCurrentUser.Text = "Người dùng:";
@@ -282,7 +282,7 @@ namespace LTWCHARLIEKODE
             // 
             // lblCurrentRole
             // 
-            this.lblCurrentRole.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrentRole.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCurrentRole.Name = "lblCurrentRole";
             this.lblCurrentRole.Size = new System.Drawing.Size(55, 20);
             this.lblCurrentRole.Text = "Vai trò:";
@@ -293,7 +293,7 @@ namespace LTWCHARLIEKODE
             this.lblExpiringAlert.LinkColor = System.Drawing.Color.Crimson;
             this.lblExpiringAlert.Name = "lblExpiringAlert";
             this.lblExpiringAlert.Size = new System.Drawing.Size(220, 20);
-            this.lblExpiringAlert.Text = "  |  🔔 Kiểm tra hạn gói tập...";
+            this.lblExpiringAlert.Text = "  |  Kiểm tra hạn gói tập...";
             this.lblExpiringAlert.Click += new System.EventHandler(this.lblExpiringAlert_Click);
             // 
             // Form_Main

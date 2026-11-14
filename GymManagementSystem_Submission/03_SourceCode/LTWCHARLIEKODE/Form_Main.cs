@@ -39,6 +39,9 @@ namespace LTWCHARLIEKODE
 
             // E. Chạy tác vụ ngầm kiểm tra các gói tập sắp hết hạn (< 5 ngày)
             CheckExpiringPackagesInBackground();
+
+            // F. Mở Màn hình Chào mừng (Welcome Dashboard) ngay khi vào hệ thống
+            OpenChildForm<Form_Welcome>();
         }
 
         /// <summary>
@@ -144,7 +147,7 @@ namespace LTWCHARLIEKODE
         /// Hàm mở Form con bên trong Form_Main.
         /// Đảm bảo nếu Form đã mở rồi thì Active (mang ra trước) chứ không mở trùng lặp nhiều lần.
         /// </summary>
-        private void OpenChildForm<T>() where T : Form, new()
+        public void OpenChildForm<T>() where T : Form, new()
         {
             // Tìm xem Form này đã được mở trong danh sách MdiChildren chưa
             Form existingForm = this.MdiChildren.FirstOrDefault(f => f is T);
@@ -233,6 +236,12 @@ namespace LTWCHARLIEKODE
             OpenChildForm<Form_RoleManagement>();
         }
 
+        
+        public void menuWelcome_Click(object sender, EventArgs e)
+        {
+            OpenChildForm<Form_Welcome>();
+        }
+
         private void menuChangePassword_Click(object sender, EventArgs e)
         {
             Form_ChangePassword changePasswordForm = new Form_ChangePassword();
@@ -312,7 +321,7 @@ namespace LTWCHARLIEKODE
                 var list = await System.Threading.Tasks.Task.Run(() => EmailReminderService.GetExpiringMembers(5));
                 if (list != null && list.Count > 0)
                 {
-                    lblExpiringAlert.Text = $"  |  🔔 Có {list.Count} gói tập sắp hết hạn (< 5 ngày). Nhấn để xem & gửi Email!";
+                    lblExpiringAlert.Text = $"  |  Có {list.Count} gói tập sắp hết hạn (< 5 ngày). Nhấn để xem & gửi Email!";
                     lblExpiringAlert.LinkColor = Color.Crimson;
                 }
                 else
@@ -323,7 +332,7 @@ namespace LTWCHARLIEKODE
             }
             catch
             {
-                lblExpiringAlert.Text = "  |  🔔 Nhấn để kiểm tra danh sách sắp hết hạn";
+                lblExpiringAlert.Text = "  |  Nhấn để kiểm tra danh sách sắp hết hạn";
             }
         }
 

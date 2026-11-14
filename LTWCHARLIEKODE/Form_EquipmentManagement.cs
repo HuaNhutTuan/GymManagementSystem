@@ -68,9 +68,9 @@ namespace LTWCHARLIEKODE
                     int brokenCount = db.Equipments.Count(x => x.Status == "Báo hỏng");
                     int maintenanceCount = db.Equipments.Count(x => x.Status == "Đang bảo trì");
 
-                    lblKpiActive.Text = $"🟢 Hoạt động: {activeCount}";
-                    lblKpiBroken.Text = $"🔴 Báo hỏng: {brokenCount}";
-                    lblKpiMaintenance.Text = $"🟡 Đang bảo trì: {maintenanceCount}";
+                    lblKpiActive.Text = $"Hoạt động: {activeCount}";
+                    lblKpiBroken.Text = $"Báo hỏng: {brokenCount}";
+                    lblKpiMaintenance.Text = $"Đang bảo trì: {maintenanceCount}";
                 }
             }
             catch (Exception ex)
@@ -110,19 +110,19 @@ namespace LTWCHARLIEKODE
                 {
                     row.Cells["Trạng Thái"].Style.BackColor = Color.FromArgb(212, 237, 218);
                     row.Cells["Trạng Thái"].Style.ForeColor = Color.FromArgb(21, 87, 36);
-                    row.Cells["Trạng Thái"].Style.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+                    row.Cells["Trạng Thái"].Style.Font = new Font("Tahoma", 9F, FontStyle.Bold);
                 }
                 else if (status == "Báo hỏng")
                 {
                     row.Cells["Trạng Thái"].Style.BackColor = Color.FromArgb(248, 215, 218);
                     row.Cells["Trạng Thái"].Style.ForeColor = Color.FromArgb(114, 28, 36);
-                    row.Cells["Trạng Thái"].Style.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+                    row.Cells["Trạng Thái"].Style.Font = new Font("Tahoma", 9F, FontStyle.Bold);
                 }
                 else if (status == "Đang bảo trì")
                 {
                     row.Cells["Trạng Thái"].Style.BackColor = Color.FromArgb(255, 243, 205);
                     row.Cells["Trạng Thái"].Style.ForeColor = Color.FromArgb(133, 100, 4);
-                    row.Cells["Trạng Thái"].Style.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+                    row.Cells["Trạng Thái"].Style.Font = new Font("Tahoma", 9F, FontStyle.Bold);
                 }
             }
         }
@@ -210,7 +210,7 @@ namespace LTWCHARLIEKODE
                                 totalCost += Convert.ToDecimal(r["Chi Phí (VNĐ)"]);
                         }
 
-                        lblTotalCost.Text = $"💰 Tổng chi phí sửa chữa thiết bị này: {totalCost:N0} VNĐ";
+                        lblTotalCost.Text = $"Tổng chi phí sửa chữa thiết bị này: {totalCost:N0} VNĐ";
                     }
                 }
             }

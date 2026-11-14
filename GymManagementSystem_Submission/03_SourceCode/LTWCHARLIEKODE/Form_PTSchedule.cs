@@ -600,13 +600,13 @@ namespace LTWCHARLIEKODE
                 }
 
                 var sb = new System.Text.StringBuilder();
-                sb.AppendLine($"📅 LỊCH TRỐNG CỦA HLV: {trainerName}");
+                sb.AppendLine($"LỊCH TRỐNG CỦA HLV: {trainerName}");
                 sb.AppendLine($"Ngày: {selectedDate:dd/MM/yyyy}");
                 sb.AppendLine(new string('-', 45));
 
                 if (bookedSlots.Count > 0)
                 {
-                    sb.AppendLine("🔴 Các ca đã có lịch:");
+                    sb.AppendLine("• Các ca đã có lịch:");
                     foreach (var b in bookedSlots)
                     {
                         sb.AppendLine($"   • {b.Item1:hh\\:mm} - {b.Item2:hh\\:mm} : {b.Item3}");
@@ -616,7 +616,7 @@ namespace LTWCHARLIEKODE
 
                 if (availableSlots.Count > 0)
                 {
-                    sb.AppendLine($"🟢 Có {availableSlots.Count} khung giờ còn trống:");
+                    sb.AppendLine($"• Có {availableSlots.Count} khung giờ còn trống:");
                     foreach (var s in availableSlots)
                     {
                         sb.AppendLine($"   ✔ {s.Item1:hh\\:mm} - {s.Item2:hh\\:mm}");

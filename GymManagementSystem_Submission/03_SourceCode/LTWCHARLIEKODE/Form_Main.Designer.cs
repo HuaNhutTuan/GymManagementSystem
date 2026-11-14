@@ -30,6 +30,7 @@ namespace LTWCHARLIEKODE
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuSystem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuWelcome = new System.Windows.Forms.ToolStripMenuItem();
             this.menuServerConfig = new System.Windows.Forms.ToolStripMenuItem();
             this.menuChangePassword = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -78,6 +79,7 @@ namespace LTWCHARLIEKODE
             // menuSystem
             // 
             this.menuSystem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuWelcome,
             this.menuServerConfig,
             this.menuChangePassword,
             this.toolStripSeparator1,
@@ -86,7 +88,14 @@ namespace LTWCHARLIEKODE
             this.menuSystem.Name = "menuSystem";
             this.menuSystem.Size = new System.Drawing.Size(85, 24);
             this.menuSystem.Text = "Hệ thống";
+                        // 
+            // menuWelcome
             // 
+            this.menuWelcome.Name = "menuWelcome";
+            this.menuWelcome.Size = new System.Drawing.Size(260, 26);
+            this.menuWelcome.Text = "Màn hình chào mừng (Trang chủ)";
+            this.menuWelcome.Click += new System.EventHandler(this.menuWelcome_Click);
+// 
             // menuServerConfig
             // 
             this.menuServerConfig.Name = "menuServerConfig";
@@ -160,7 +169,7 @@ namespace LTWCHARLIEKODE
             // 
             this.btnCheckInQR.Name = "btnCheckInQR";
             this.btnCheckInQR.Size = new System.Drawing.Size(260, 26);
-            this.btnCheckInQR.Text = "📷 Quét mã QR Check-in (Webcam)";
+            this.btnCheckInQR.Text = "Quét mã QR Check-in (Webcam)";
             this.btnCheckInQR.Click += new System.EventHandler(this.btnCheckInQR_Click);
             // 
             // btnEmailReminder
@@ -260,7 +269,7 @@ namespace LTWCHARLIEKODE
             // 
             // lblCurrentUser
             // 
-            this.lblCurrentUser.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrentUser.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCurrentUser.Name = "lblCurrentUser";
             this.lblCurrentUser.Size = new System.Drawing.Size(92, 20);
             this.lblCurrentUser.Text = "Người dùng:";
@@ -273,7 +282,7 @@ namespace LTWCHARLIEKODE
             // 
             // lblCurrentRole
             // 
-            this.lblCurrentRole.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrentRole.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCurrentRole.Name = "lblCurrentRole";
             this.lblCurrentRole.Size = new System.Drawing.Size(55, 20);
             this.lblCurrentRole.Text = "Vai trò:";
@@ -284,7 +293,7 @@ namespace LTWCHARLIEKODE
             this.lblExpiringAlert.LinkColor = System.Drawing.Color.Crimson;
             this.lblExpiringAlert.Name = "lblExpiringAlert";
             this.lblExpiringAlert.Size = new System.Drawing.Size(220, 20);
-            this.lblExpiringAlert.Text = "  |  🔔 Kiểm tra hạn gói tập...";
+            this.lblExpiringAlert.Text = "  |  Kiểm tra hạn gói tập...";
             this.lblExpiringAlert.Click += new System.EventHandler(this.lblExpiringAlert_Click);
             // 
             // Form_Main
@@ -314,6 +323,7 @@ namespace LTWCHARLIEKODE
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menuSystem;
+        private System.Windows.Forms.ToolStripMenuItem menuWelcome;
         private System.Windows.Forms.ToolStripMenuItem menuServerConfig;
         private System.Windows.Forms.ToolStripMenuItem menuChangePassword;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;

@@ -79,51 +79,51 @@ namespace LTWCHARLIEKODE
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 13.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Font = new System.Drawing.Font("Tahoma", 13.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
             this.lblTitle.Location = new System.Drawing.Point(18, 16);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(370, 25);
             this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "🏋️ QUẢN LÝ TRẠNG THÁI THIẾT BỊ & MÁY TẬP";
+            this.lblTitle.Text = "QUẢN LÝ TRẠNG THÁI THIẾT BỊ & MÁY TẬP";
             // 
             // lblKpiActive
             // 
             this.lblKpiActive.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblKpiActive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
-            this.lblKpiActive.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblKpiActive.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblKpiActive.ForeColor = System.Drawing.Color.White;
             this.lblKpiActive.Location = new System.Drawing.Point(620, 15);
             this.lblKpiActive.Name = "lblKpiActive";
             this.lblKpiActive.Size = new System.Drawing.Size(140, 30);
             this.lblKpiActive.TabIndex = 1;
-            this.lblKpiActive.Text = "🟢 Hoạt động: 0";
+            this.lblKpiActive.Text = "Hoạt động: 0";
             this.lblKpiActive.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblKpiBroken
             // 
             this.lblKpiBroken.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblKpiBroken.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
-            this.lblKpiBroken.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblKpiBroken.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblKpiBroken.ForeColor = System.Drawing.Color.White;
             this.lblKpiBroken.Location = new System.Drawing.Point(770, 15);
             this.lblKpiBroken.Name = "lblKpiBroken";
             this.lblKpiBroken.Size = new System.Drawing.Size(130, 30);
             this.lblKpiBroken.TabIndex = 2;
-            this.lblKpiBroken.Text = "🔴 Báo hỏng: 0";
+            this.lblKpiBroken.Text = "Báo hỏng: 0";
             this.lblKpiBroken.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblKpiMaintenance
             // 
             this.lblKpiMaintenance.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblKpiMaintenance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(152)))), ((int)(((byte)(0)))));
-            this.lblKpiMaintenance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblKpiMaintenance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblKpiMaintenance.ForeColor = System.Drawing.Color.White;
             this.lblKpiMaintenance.Location = new System.Drawing.Point(910, 15);
             this.lblKpiMaintenance.Name = "lblKpiMaintenance";
             this.lblKpiMaintenance.Size = new System.Drawing.Size(155, 30);
             this.lblKpiMaintenance.TabIndex = 3;
-            this.lblKpiMaintenance.Text = "🟡 Đang bảo trì: 0";
+            this.lblKpiMaintenance.Text = "Đang bảo trì: 0";
             this.lblKpiMaintenance.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // grpEquipmentInfo
@@ -143,7 +143,7 @@ namespace LTWCHARLIEKODE
             this.grpEquipmentInfo.Controls.Add(this.lblEquipmentName);
             this.grpEquipmentInfo.Controls.Add(this.txtEquipmentId);
             this.grpEquipmentInfo.Controls.Add(this.lblEquipmentId);
-            this.grpEquipmentInfo.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
+            this.grpEquipmentInfo.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpEquipmentInfo.Location = new System.Drawing.Point(18, 70);
             this.grpEquipmentInfo.Name = "grpEquipmentInfo";
             this.grpEquipmentInfo.Size = new System.Drawing.Size(1048, 115);
@@ -154,7 +154,7 @@ namespace LTWCHARLIEKODE
             // lblEquipmentId
             // 
             this.lblEquipmentId.AutoSize = true;
-            this.lblEquipmentId.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lblEquipmentId.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEquipmentId.Location = new System.Drawing.Point(15, 30);
             this.lblEquipmentId.Name = "lblEquipmentId";
             this.lblEquipmentId.Size = new System.Drawing.Size(46, 15);
@@ -163,7 +163,7 @@ namespace LTWCHARLIEKODE
             // 
             // txtEquipmentId
             // 
-            this.txtEquipmentId.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtEquipmentId.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEquipmentId.Location = new System.Drawing.Point(68, 26);
             this.txtEquipmentId.Name = "txtEquipmentId";
             this.txtEquipmentId.ReadOnly = true;
@@ -173,7 +173,7 @@ namespace LTWCHARLIEKODE
             // lblEquipmentName
             // 
             this.lblEquipmentName.AutoSize = true;
-            this.lblEquipmentName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lblEquipmentName.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEquipmentName.Location = new System.Drawing.Point(150, 30);
             this.lblEquipmentName.Name = "lblEquipmentName";
             this.lblEquipmentName.Size = new System.Drawing.Size(67, 15);
@@ -182,7 +182,7 @@ namespace LTWCHARLIEKODE
             // 
             // txtEquipmentName
             // 
-            this.txtEquipmentName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtEquipmentName.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEquipmentName.Location = new System.Drawing.Point(225, 26);
             this.txtEquipmentName.Name = "txtEquipmentName";
             this.txtEquipmentName.Size = new System.Drawing.Size(260, 23);
@@ -191,7 +191,7 @@ namespace LTWCHARLIEKODE
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lblStatus.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatus.Location = new System.Drawing.Point(505, 30);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(62, 15);
@@ -201,7 +201,7 @@ namespace LTWCHARLIEKODE
             // cboStatus
             // 
             this.cboStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboStatus.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cboStatus.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboStatus.FormattingEnabled = true;
             this.cboStatus.Items.AddRange(new object[] {
             "Đang hoạt động",
@@ -215,7 +215,7 @@ namespace LTWCHARLIEKODE
             // lblQuantity
             // 
             this.lblQuantity.AutoSize = true;
-            this.lblQuantity.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lblQuantity.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuantity.Location = new System.Drawing.Point(750, 30);
             this.lblQuantity.Name = "lblQuantity";
             this.lblQuantity.Size = new System.Drawing.Size(57, 15);
@@ -224,7 +224,7 @@ namespace LTWCHARLIEKODE
             // 
             // numQuantity
             // 
-            this.numQuantity.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.numQuantity.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numQuantity.Location = new System.Drawing.Point(815, 26);
             this.numQuantity.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             this.numQuantity.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
@@ -239,7 +239,7 @@ namespace LTWCHARLIEKODE
             this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnAdd.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Location = new System.Drawing.Point(18, 68);
             this.btnAdd.Name = "btnAdd";
@@ -255,7 +255,7 @@ namespace LTWCHARLIEKODE
             this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEdit.FlatAppearance.BorderSize = 0;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnEdit.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.Color.White;
             this.btnEdit.Location = new System.Drawing.Point(130, 68);
             this.btnEdit.Name = "btnEdit";
@@ -271,13 +271,13 @@ namespace LTWCHARLIEKODE
             this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpdate.FlatAppearance.BorderSize = 0;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnUpdate.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
             this.btnUpdate.Location = new System.Drawing.Point(242, 68);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(110, 32);
             this.btnUpdate.TabIndex = 10;
-            this.btnUpdate.Text = "💾 Lưu thay đổi";
+            this.btnUpdate.Text = "Lưu thay đổi";
             this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
@@ -287,13 +287,13 @@ namespace LTWCHARLIEKODE
             this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnDelete.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Location = new System.Drawing.Point(364, 68);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(90, 32);
             this.btnDelete.TabIndex = 11;
-            this.btnDelete.Text = "🗑 Xóa";
+            this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -303,7 +303,7 @@ namespace LTWCHARLIEKODE
             this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClear.FlatAppearance.BorderSize = 0;
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnClear.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.Color.White;
             this.btnClear.Location = new System.Drawing.Point(466, 68);
             this.btnClear.Name = "btnClear";
@@ -322,7 +322,7 @@ namespace LTWCHARLIEKODE
             this.grpSearch.Controls.Add(this.lblFilterStatus);
             this.grpSearch.Controls.Add(this.txtSearch);
             this.grpSearch.Controls.Add(this.lblSearch);
-            this.grpSearch.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.grpSearch.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpSearch.Location = new System.Drawing.Point(18, 195);
             this.grpSearch.Name = "grpSearch";
             this.grpSearch.Size = new System.Drawing.Size(1048, 60);
@@ -378,13 +378,13 @@ namespace LTWCHARLIEKODE
             this.btnExportExcel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExportExcel.FlatAppearance.BorderSize = 0;
             this.btnExportExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExportExcel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnExportExcel.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExportExcel.ForeColor = System.Drawing.Color.White;
             this.btnExportExcel.Location = new System.Drawing.Point(845, 18);
             this.btnExportExcel.Name = "btnExportExcel";
             this.btnExportExcel.Size = new System.Drawing.Size(185, 30);
             this.btnExportExcel.TabIndex = 4;
-            this.btnExportExcel.Text = "📊 Xuất Excel (EPPlus)";
+            this.btnExportExcel.Text = "Xuất Excel (EPPlus)";
             this.btnExportExcel.UseVisualStyleBackColor = false;
             this.btnExportExcel.Click += new System.EventHandler(this.btnExportExcel_Click);
             // 
@@ -421,7 +421,7 @@ namespace LTWCHARLIEKODE
             this.grpMaintenance.Controls.Add(this.lblAddRepair);
             this.grpMaintenance.Controls.Add(this.lblTotalCost);
             this.grpMaintenance.Controls.Add(this.dgvMaintenance);
-            this.grpMaintenance.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
+            this.grpMaintenance.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpMaintenance.Location = new System.Drawing.Point(18, 460);
             this.grpMaintenance.Name = "grpMaintenance";
             this.grpMaintenance.Size = new System.Drawing.Size(1048, 210);
@@ -452,7 +452,7 @@ namespace LTWCHARLIEKODE
             // 
             this.lblTotalCost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblTotalCost.AutoSize = true;
-            this.lblTotalCost.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
+            this.lblTotalCost.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalCost.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
             this.lblTotalCost.Location = new System.Drawing.Point(15, 180);
             this.lblTotalCost.Name = "lblTotalCost";
@@ -464,7 +464,7 @@ namespace LTWCHARLIEKODE
             // 
             this.lblAddRepair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblAddRepair.AutoSize = true;
-            this.lblAddRepair.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lblAddRepair.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddRepair.Location = new System.Drawing.Point(670, 25);
             this.lblAddRepair.Name = "lblAddRepair";
             this.lblAddRepair.Size = new System.Drawing.Size(95, 15);
@@ -474,7 +474,7 @@ namespace LTWCHARLIEKODE
             // txtRepairDesc
             // 
             this.txtRepairDesc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtRepairDesc.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtRepairDesc.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRepairDesc.Location = new System.Drawing.Point(670, 45);
             this.txtRepairDesc.Multiline = true;
             this.txtRepairDesc.Name = "txtRepairDesc";
@@ -485,7 +485,7 @@ namespace LTWCHARLIEKODE
             // 
             this.lblRepairCost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblRepairCost.AutoSize = true;
-            this.lblRepairCost.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lblRepairCost.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRepairCost.Location = new System.Drawing.Point(670, 100);
             this.lblRepairCost.Name = "lblRepairCost";
             this.lblRepairCost.Size = new System.Drawing.Size(81, 15);
@@ -495,7 +495,7 @@ namespace LTWCHARLIEKODE
             // numRepairCost
             // 
             this.numRepairCost.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.numRepairCost.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.numRepairCost.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numRepairCost.Increment = new decimal(new int[] { 50000, 0, 0, 0 });
             this.numRepairCost.Location = new System.Drawing.Point(670, 120);
             this.numRepairCost.Maximum = new decimal(new int[] { 100000000, 0, 0, 0 });
@@ -508,7 +508,7 @@ namespace LTWCHARLIEKODE
             // 
             this.lblPerformer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPerformer.AutoSize = true;
-            this.lblPerformer.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lblPerformer.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPerformer.Location = new System.Drawing.Point(850, 100);
             this.lblPerformer.Name = "lblPerformer";
             this.lblPerformer.Size = new System.Drawing.Size(95, 15);
@@ -518,7 +518,7 @@ namespace LTWCHARLIEKODE
             // txtPerformer
             // 
             this.txtPerformer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPerformer.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtPerformer.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPerformer.Location = new System.Drawing.Point(850, 120);
             this.txtPerformer.Name = "txtPerformer";
             this.txtPerformer.Size = new System.Drawing.Size(180, 23);
@@ -531,13 +531,13 @@ namespace LTWCHARLIEKODE
             this.btnAddRepair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddRepair.FlatAppearance.BorderSize = 0;
             this.btnAddRepair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddRepair.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnAddRepair.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddRepair.ForeColor = System.Drawing.Color.White;
             this.btnAddRepair.Location = new System.Drawing.Point(670, 155);
             this.btnAddRepair.Name = "btnAddRepair";
             this.btnAddRepair.Size = new System.Drawing.Size(360, 32);
             this.btnAddRepair.TabIndex = 8;
-            this.btnAddRepair.Text = "🔧 Ghi nhận sửa chữa & Đổi trạng thái thiết bị";
+            this.btnAddRepair.Text = "Ghi nhận sửa chữa & Đổi trạng thái thiết bị";
             this.btnAddRepair.UseVisualStyleBackColor = false;
             this.btnAddRepair.Click += new System.EventHandler(this.btnAddRepair_Click);
             // 
@@ -552,7 +552,7 @@ namespace LTWCHARLIEKODE
             this.Controls.Add(this.grpSearch);
             this.Controls.Add(this.grpEquipmentInfo);
             this.Controls.Add(this.pnlHeader);
-            this.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MinimumSize = new System.Drawing.Size(1100, 720);
             this.Name = "Form_EquipmentManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

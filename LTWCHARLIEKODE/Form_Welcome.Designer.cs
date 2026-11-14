@@ -74,7 +74,7 @@ namespace LTWCHARLIEKODE
             // lblQuote
             // 
             this.lblQuote.AutoSize = true;
-            this.lblQuote.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Italic);
+            this.lblQuote.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuote.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(0)))));
             this.lblQuote.Location = new System.Drawing.Point(32, 98);
             this.lblQuote.Name = "lblQuote";
@@ -85,7 +85,7 @@ namespace LTWCHARLIEKODE
             // lblGreetingSub
             // 
             this.lblGreetingSub.AutoSize = true;
-            this.lblGreetingSub.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.lblGreetingSub.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGreetingSub.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(220)))), ((int)(((byte)(245)))));
             this.lblGreetingSub.Location = new System.Drawing.Point(32, 63);
             this.lblGreetingSub.Name = "lblGreetingSub";
@@ -96,13 +96,13 @@ namespace LTWCHARLIEKODE
             // lblGreetingHeader
             // 
             this.lblGreetingHeader.AutoSize = true;
-            this.lblGreetingHeader.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.lblGreetingHeader.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGreetingHeader.ForeColor = System.Drawing.Color.White;
             this.lblGreetingHeader.Location = new System.Drawing.Point(30, 18);
             this.lblGreetingHeader.Name = "lblGreetingHeader";
             this.lblGreetingHeader.Size = new System.Drawing.Size(650, 41);
             this.lblGreetingHeader.TabIndex = 0;
-            this.lblGreetingHeader.Text = "🎉 CHÀO MỪNG ĐẾN VỚI HỆ THỐNG GYM";
+            this.lblGreetingHeader.Text = "CHÀO MỪNG ĐẾN VỚI HỆ THỐNG GYM";
             // 
             // pnlContent
             // 
@@ -141,14 +141,14 @@ namespace LTWCHARLIEKODE
             this.btnActionMembers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnActionMembers.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(225)))), ((int)(((byte)(235)))));
             this.btnActionMembers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActionMembers.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.btnActionMembers.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActionMembers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(80)))));
             this.btnActionMembers.Location = new System.Drawing.Point(10, 10);
             this.btnActionMembers.Margin = new System.Windows.Forms.Padding(10);
             this.btnActionMembers.Name = "btnActionMembers";
             this.btnActionMembers.Size = new System.Drawing.Size(235, 140);
             this.btnActionMembers.TabIndex = 0;
-            this.btnActionMembers.Text = "👤 Quản lý Hội viên\r\n\r\nTra cứu, thêm mới và quản lý hồ sơ tập luyện";
+            this.btnActionMembers.Text = "Quản lý Hội viên\r\n\r\nTra cứu, thêm mới và quản lý hồ sơ tập luyện";
             this.btnActionMembers.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnActionMembers.UseVisualStyleBackColor = false;
             this.btnActionMembers.Click += new System.EventHandler(this.btnActionMembers_Click);
@@ -159,14 +159,14 @@ namespace LTWCHARLIEKODE
             this.btnActionPackages.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnActionPackages.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(225)))), ((int)(((byte)(235)))));
             this.btnActionPackages.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActionPackages.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.btnActionPackages.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActionPackages.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(80)))));
             this.btnActionPackages.Location = new System.Drawing.Point(265, 10);
             this.btnActionPackages.Margin = new System.Windows.Forms.Padding(10);
             this.btnActionPackages.Name = "btnActionPackages";
             this.btnActionPackages.Size = new System.Drawing.Size(235, 140);
             this.btnActionPackages.TabIndex = 1;
-            this.btnActionPackages.Text = "📋 Đăng ký Gói tập\r\n\r\nKý hợp đồng thẻ tháng, quý, năm & gói PT";
+            this.btnActionPackages.Text = "Đăng ký Gói tập\r\n\r\nKý hợp đồng thẻ tháng, quý, năm & gói PT";
             this.btnActionPackages.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnActionPackages.UseVisualStyleBackColor = false;
             this.btnActionPackages.Click += new System.EventHandler(this.btnActionPackages_Click);
@@ -177,14 +177,14 @@ namespace LTWCHARLIEKODE
             this.btnActionCheckIn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnActionCheckIn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(225)))), ((int)(((byte)(235)))));
             this.btnActionCheckIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActionCheckIn.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.btnActionCheckIn.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActionCheckIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(80)))));
             this.btnActionCheckIn.Location = new System.Drawing.Point(520, 10);
             this.btnActionCheckIn.Margin = new System.Windows.Forms.Padding(10);
             this.btnActionCheckIn.Name = "btnActionCheckIn";
             this.btnActionCheckIn.Size = new System.Drawing.Size(235, 140);
             this.btnActionCheckIn.TabIndex = 2;
-            this.btnActionCheckIn.Text = "📷 Điểm danh QR / Thẻ\r\n\r\nQuét mã QR và quẹt thẻ RFID vào phòng < 50ms";
+            this.btnActionCheckIn.Text = "Điểm danh QR / Thẻ\r\n\r\nQuét mã QR và quẹt thẻ RFID vào phòng < 50ms";
             this.btnActionCheckIn.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnActionCheckIn.UseVisualStyleBackColor = false;
             this.btnActionCheckIn.Click += new System.EventHandler(this.btnActionCheckIn_Click);
@@ -195,14 +195,14 @@ namespace LTWCHARLIEKODE
             this.btnActionPTSchedule.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnActionPTSchedule.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(225)))), ((int)(((byte)(235)))));
             this.btnActionPTSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActionPTSchedule.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.btnActionPTSchedule.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActionPTSchedule.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(80)))));
             this.btnActionPTSchedule.Location = new System.Drawing.Point(775, 10);
             this.btnActionPTSchedule.Margin = new System.Windows.Forms.Padding(10);
             this.btnActionPTSchedule.Name = "btnActionPTSchedule";
             this.btnActionPTSchedule.Size = new System.Drawing.Size(235, 140);
             this.btnActionPTSchedule.TabIndex = 3;
-            this.btnActionPTSchedule.Text = "📅 Lịch tập PT\r\n\r\nXếp lịch tập cá nhân, chống xung đột giờ dạy";
+            this.btnActionPTSchedule.Text = "Lịch tập PT\r\n\r\nXếp lịch tập cá nhân, chống xung đột giờ dạy";
             this.btnActionPTSchedule.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnActionPTSchedule.UseVisualStyleBackColor = false;
             this.btnActionPTSchedule.Click += new System.EventHandler(this.btnActionPTSchedule_Click);
@@ -213,14 +213,14 @@ namespace LTWCHARLIEKODE
             this.btnActionInvoices.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnActionInvoices.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(225)))), ((int)(((byte)(235)))));
             this.btnActionInvoices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActionInvoices.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.btnActionInvoices.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActionInvoices.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(80)))));
             this.btnActionInvoices.Location = new System.Drawing.Point(10, 170);
             this.btnActionInvoices.Margin = new System.Windows.Forms.Padding(10);
             this.btnActionInvoices.Name = "btnActionInvoices";
             this.btnActionInvoices.Size = new System.Drawing.Size(235, 140);
             this.btnActionInvoices.TabIndex = 4;
-            this.btnActionInvoices.Text = "🧾 Lập Hóa đơn\r\n\r\nThu phí dịch vụ và quản lý hóa đơn thanh toán";
+            this.btnActionInvoices.Text = "Lập Hóa đơn\r\n\r\nThu phí dịch vụ và quản lý hóa đơn thanh toán";
             this.btnActionInvoices.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnActionInvoices.UseVisualStyleBackColor = false;
             this.btnActionInvoices.Click += new System.EventHandler(this.btnActionInvoices_Click);
@@ -231,14 +231,14 @@ namespace LTWCHARLIEKODE
             this.btnActionRevenue.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnActionRevenue.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(225)))), ((int)(((byte)(235)))));
             this.btnActionRevenue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActionRevenue.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.btnActionRevenue.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActionRevenue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(80)))));
             this.btnActionRevenue.Location = new System.Drawing.Point(265, 170);
             this.btnActionRevenue.Margin = new System.Windows.Forms.Padding(10);
             this.btnActionRevenue.Name = "btnActionRevenue";
             this.btnActionRevenue.Size = new System.Drawing.Size(235, 140);
             this.btnActionRevenue.TabIndex = 5;
-            this.btnActionRevenue.Text = "📊 Báo cáo Doanh thu\r\n\r\nThống kê tài chính, biểu đồ & xuất file Excel (Admin)";
+            this.btnActionRevenue.Text = "Báo cáo Doanh thu\r\n\r\nThống kê tài chính, biểu đồ & xuất file Excel (Admin)";
             this.btnActionRevenue.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnActionRevenue.UseVisualStyleBackColor = false;
             this.btnActionRevenue.Click += new System.EventHandler(this.btnActionRevenue_Click);
@@ -249,14 +249,14 @@ namespace LTWCHARLIEKODE
             this.btnActionCatalog.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnActionCatalog.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(225)))), ((int)(((byte)(235)))));
             this.btnActionCatalog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActionCatalog.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.btnActionCatalog.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActionCatalog.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(80)))));
             this.btnActionCatalog.Location = new System.Drawing.Point(520, 170);
             this.btnActionCatalog.Margin = new System.Windows.Forms.Padding(10);
             this.btnActionCatalog.Name = "btnActionCatalog";
             this.btnActionCatalog.Size = new System.Drawing.Size(235, 140);
             this.btnActionCatalog.TabIndex = 6;
-            this.btnActionCatalog.Text = "🏷️ Danh mục Gói tập\r\n\r\nXem chi tiết quyền lợi các gói Gym & Fitness";
+            this.btnActionCatalog.Text = "Danh mục Gói tập\r\n\r\nXem chi tiết quyền lợi các gói Gym & Fitness";
             this.btnActionCatalog.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnActionCatalog.UseVisualStyleBackColor = false;
             this.btnActionCatalog.Click += new System.EventHandler(this.btnActionCatalog_Click);
@@ -267,14 +267,14 @@ namespace LTWCHARLIEKODE
             this.btnActionPassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnActionPassword.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(225)))), ((int)(((byte)(235)))));
             this.btnActionPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnActionPassword.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.btnActionPassword.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActionPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(80)))));
             this.btnActionPassword.Location = new System.Drawing.Point(775, 170);
             this.btnActionPassword.Margin = new System.Windows.Forms.Padding(10);
             this.btnActionPassword.Name = "btnActionPassword";
             this.btnActionPassword.Size = new System.Drawing.Size(235, 140);
             this.btnActionPassword.TabIndex = 7;
-            this.btnActionPassword.Text = "🔑 Đổi Mật khẩu\r\n\r\nCập nhật mật khẩu bảo vệ tài khoản cá nhân";
+            this.btnActionPassword.Text = "Đổi Mật khẩu\r\n\r\nCập nhật mật khẩu bảo vệ tài khoản cá nhân";
             this.btnActionPassword.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnActionPassword.UseVisualStyleBackColor = false;
             this.btnActionPassword.Click += new System.EventHandler(this.btnActionPassword_Click);
@@ -282,13 +282,13 @@ namespace LTWCHARLIEKODE
             // lblActionTitle
             // 
             this.lblActionTitle.AutoSize = true;
-            this.lblActionTitle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblActionTitle.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblActionTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(39)))), ((int)(((byte)(72)))));
             this.lblActionTitle.Location = new System.Drawing.Point(32, 138);
             this.lblActionTitle.Name = "lblActionTitle";
             this.lblActionTitle.Size = new System.Drawing.Size(325, 28);
             this.lblActionTitle.TabIndex = 1;
-            this.lblActionTitle.Text = "⚡ TRUY CẬP NHANH CHỨC NĂNG";
+            this.lblActionTitle.Text = "TRUY CẬP NHANH CHỨC NĂNG";
             // 
             // pnlStats
             // 
@@ -326,7 +326,7 @@ namespace LTWCHARLIEKODE
             // lblCountMembers
             // 
             this.lblCountMembers.AutoSize = true;
-            this.lblCountMembers.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.lblCountMembers.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCountMembers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(134)))), ((int)(((byte)(222)))));
             this.lblCountMembers.Location = new System.Drawing.Point(12, 38);
             this.lblCountMembers.Name = "lblCountMembers";
@@ -337,13 +337,13 @@ namespace LTWCHARLIEKODE
             // lblTitleMembers
             // 
             this.lblTitleMembers.AutoSize = true;
-            this.lblTitleMembers.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
+            this.lblTitleMembers.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitleMembers.ForeColor = System.Drawing.Color.Gray;
             this.lblTitleMembers.Location = new System.Drawing.Point(12, 12);
             this.lblTitleMembers.Name = "lblTitleMembers";
             this.lblTitleMembers.Size = new System.Drawing.Size(147, 21);
             this.lblTitleMembers.TabIndex = 0;
-            this.lblTitleMembers.Text = "👥 TỔNG HỘI VIÊN";
+            this.lblTitleMembers.Text = "TỔNG HỘI VIÊN";
             // 
             // cardTotalPackages
             // 
@@ -362,7 +362,7 @@ namespace LTWCHARLIEKODE
             // lblCountPackages
             // 
             this.lblCountPackages.AutoSize = true;
-            this.lblCountPackages.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.lblCountPackages.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCountPackages.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(172)))), ((int)(((byte)(132)))));
             this.lblCountPackages.Location = new System.Drawing.Point(12, 38);
             this.lblCountPackages.Name = "lblCountPackages";
@@ -373,13 +373,13 @@ namespace LTWCHARLIEKODE
             // lblTitlePackages
             // 
             this.lblTitlePackages.AutoSize = true;
-            this.lblTitlePackages.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
+            this.lblTitlePackages.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitlePackages.ForeColor = System.Drawing.Color.Gray;
             this.lblTitlePackages.Location = new System.Drawing.Point(12, 12);
             this.lblTitlePackages.Name = "lblTitlePackages";
             this.lblTitlePackages.Size = new System.Drawing.Size(141, 21);
             this.lblTitlePackages.TabIndex = 0;
-            this.lblTitlePackages.Text = "🏷️ GÓI TẬP ĐANG BÁN";
+            this.lblTitlePackages.Text = "GÓI TẬP ĐANG BÁN";
             // 
             // cardTotalTrainers
             // 
@@ -398,7 +398,7 @@ namespace LTWCHARLIEKODE
             // lblCountTrainers
             // 
             this.lblCountTrainers.AutoSize = true;
-            this.lblCountTrainers.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.lblCountTrainers.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCountTrainers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(82)))), ((int)(((byte)(83)))));
             this.lblCountTrainers.Location = new System.Drawing.Point(12, 38);
             this.lblCountTrainers.Name = "lblCountTrainers";
@@ -409,13 +409,13 @@ namespace LTWCHARLIEKODE
             // lblTitleTrainers
             // 
             this.lblTitleTrainers.AutoSize = true;
-            this.lblTitleTrainers.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
+            this.lblTitleTrainers.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitleTrainers.ForeColor = System.Drawing.Color.Gray;
             this.lblTitleTrainers.Location = new System.Drawing.Point(12, 12);
             this.lblTitleTrainers.Name = "lblTitleTrainers";
             this.lblTitleTrainers.Size = new System.Drawing.Size(176, 21);
             this.lblTitleTrainers.TabIndex = 0;
-            this.lblTitleTrainers.Text = "🏋️ HUẤN LUYỆN VIÊN (PT)";
+            this.lblTitleTrainers.Text = "HUẤN LUYỆN VIÊN (PT)";
             // 
             // cardTotalEquipments
             // 
@@ -434,7 +434,7 @@ namespace LTWCHARLIEKODE
             // lblCountEquipments
             // 
             this.lblCountEquipments.AutoSize = true;
-            this.lblCountEquipments.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.lblCountEquipments.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCountEquipments.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(159)))), ((int)(((byte)(67)))));
             this.lblCountEquipments.Location = new System.Drawing.Point(12, 38);
             this.lblCountEquipments.Name = "lblCountEquipments";
@@ -445,13 +445,13 @@ namespace LTWCHARLIEKODE
             // lblTitleEquipments
             // 
             this.lblTitleEquipments.AutoSize = true;
-            this.lblTitleEquipments.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
+            this.lblTitleEquipments.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitleEquipments.ForeColor = System.Drawing.Color.Gray;
             this.lblTitleEquipments.Location = new System.Drawing.Point(12, 12);
             this.lblTitleEquipments.Name = "lblTitleEquipments";
             this.lblTitleEquipments.Size = new System.Drawing.Size(167, 21);
             this.lblTitleEquipments.TabIndex = 0;
-            this.lblTitleEquipments.Text = "🛠️ THIẾT BỊ PHÒNG TẬP";
+            this.lblTitleEquipments.Text = "THIẾT BỊ PHÒNG TẬP";
             // 
             // pnlFooter
             // 
@@ -466,7 +466,7 @@ namespace LTWCHARLIEKODE
             // lblFooterText
             // 
             this.lblFooterText.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblFooterText.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular);
+            this.lblFooterText.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFooterText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(115)))), ((int)(((byte)(130)))));
             this.lblFooterText.Location = new System.Drawing.Point(0, 0);
             this.lblFooterText.Name = "lblFooterText";
@@ -478,13 +478,13 @@ namespace LTWCHARLIEKODE
             // 
             // Form_Welcome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1082, 725);
             this.Controls.Add(this.pnlContent);
             this.Controls.Add(this.pnlFooter);
             this.Controls.Add(this.pnlHeader);
-            this.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form_Welcome";
             this.Text = "MÀN HÌNH CHÀO MỪNG - GYM MANAGEMENT SYSTEM";

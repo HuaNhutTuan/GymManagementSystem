@@ -90,7 +90,7 @@ namespace LTWCHARLIEKODE
                     dgvTrainers.DataSource = dt;
                     FormatTrainersGrid();
 
-                    lblKpiTrainers.Text = $"👨‍🏫 Tổng PT: {trainers.Count}";
+                    lblKpiTrainers.Text = $"Tổng PT: {trainers.Count}";
                     lblKpiSessions.Text = $"✅ Ca đã hoàn thành: {totalCompletedSessions}";
                 }
             }
@@ -136,7 +136,7 @@ namespace LTWCHARLIEKODE
                 dgvTrainers.Columns["Hoa Hồng Tích Lũy (VNĐ)"].Width = 160;
                 dgvTrainers.Columns["Hoa Hồng Tích Lũy (VNĐ)"].DefaultCellStyle.Format = "N0";
                 dgvTrainers.Columns["Hoa Hồng Tích Lũy (VNĐ)"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-                dgvTrainers.Columns["Hoa Hồng Tích Lũy (VNĐ)"].DefaultCellStyle.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
+                dgvTrainers.Columns["Hoa Hồng Tích Lũy (VNĐ)"].DefaultCellStyle.Font = new Font("Tahoma", 9.5F, FontStyle.Bold);
                 dgvTrainers.Columns["Hoa Hồng Tích Lũy (VNĐ)"].DefaultCellStyle.ForeColor = Color.FromArgb(40, 167, 69);
             }
         }
@@ -224,7 +224,7 @@ namespace LTWCHARLIEKODE
                             dgvTrainerSchedules.Columns["Hoa Hồng Ca (VNĐ)"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
                         }
 
-                        lblTotalCommission.Text = $"💰 Tổng hoa hồng thực nhận của HLV: {totalCommission:N0} VNĐ ({completedSessions} ca thực dạy x {numCommissionRate.Value:N0} đ/ca)";
+                        lblTotalCommission.Text = $"Tổng hoa hồng thực nhận của HLV: {totalCommission:N0} VNĐ ({completedSessions} ca thực dạy x {numCommissionRate.Value:N0} đ/ca)";
                     }
                 }
             }
@@ -385,7 +385,7 @@ namespace LTWCHARLIEKODE
             btnDelete.Enabled = false;
 
             dgvTrainerSchedules.DataSource = null;
-            lblTotalCommission.Text = "💰 Tổng hoa hồng tích lũy: 0 VNĐ (0 ca thực dạy)";
+            lblTotalCommission.Text = "Tổng hoa hồng tích lũy: 0 VNĐ (0 ca thực dạy)";
         }
 
         #endregion

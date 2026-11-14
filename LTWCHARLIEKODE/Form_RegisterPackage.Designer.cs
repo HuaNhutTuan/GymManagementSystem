@@ -70,7 +70,7 @@ namespace LTWCHARLIEKODE
             // lblTitle
             // 
             this.lblTitle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
             this.lblTitle.Location = new System.Drawing.Point(0, 0);
             this.lblTitle.Name = "lblTitle";
@@ -99,7 +99,7 @@ namespace LTWCHARLIEKODE
             this.grpInput.Controls.Add(this.chkRenew);
             this.grpInput.Controls.Add(this.lblTotalLabel);
             this.grpInput.Controls.Add(this.lblTotalAmount);
-            this.grpInput.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpInput.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(43)))), ((int)(((byte)(73)))));
             this.grpInput.Location = new System.Drawing.Point(12, 68);
             this.grpInput.Name = "grpInput";
@@ -111,7 +111,7 @@ namespace LTWCHARLIEKODE
             // lblMember
             // 
             this.lblMember.AutoSize = true;
-            this.lblMember.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMember.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMember.Location = new System.Drawing.Point(20, 32);
             this.lblMember.Name = "lblMember";
             this.lblMember.Size = new System.Drawing.Size(101, 21);
@@ -121,7 +121,7 @@ namespace LTWCHARLIEKODE
             // cboMembers
             // 
             this.cboMembers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboMembers.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboMembers.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboMembers.FormattingEnabled = true;
             this.cboMembers.Location = new System.Drawing.Point(135, 28);
             this.cboMembers.Name = "cboMembers";
@@ -132,7 +132,7 @@ namespace LTWCHARLIEKODE
             // lblCurrentPackageInfo
             // 
             this.lblCurrentPackageInfo.AutoSize = true;
-            this.lblCurrentPackageInfo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrentPackageInfo.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCurrentPackageInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.lblCurrentPackageInfo.Location = new System.Drawing.Point(135, 62);
             this.lblCurrentPackageInfo.Name = "lblCurrentPackageInfo";
@@ -143,7 +143,7 @@ namespace LTWCHARLIEKODE
             // lblPackage
             // 
             this.lblPackage.AutoSize = true;
-            this.lblPackage.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPackage.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPackage.Location = new System.Drawing.Point(20, 92);
             this.lblPackage.Name = "lblPackage";
             this.lblPackage.Size = new System.Drawing.Size(98, 21);
@@ -153,7 +153,7 @@ namespace LTWCHARLIEKODE
             // cboPackages
             // 
             this.cboPackages.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboPackages.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboPackages.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboPackages.FormattingEnabled = true;
             this.cboPackages.Location = new System.Drawing.Point(135, 88);
             this.cboPackages.Name = "cboPackages";
@@ -164,7 +164,7 @@ namespace LTWCHARLIEKODE
             // lblPackagePrice
             // 
             this.lblPackagePrice.AutoSize = true;
-            this.lblPackagePrice.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPackagePrice.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPackagePrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.lblPackagePrice.Location = new System.Drawing.Point(135, 122);
             this.lblPackagePrice.Name = "lblPackagePrice";
@@ -175,7 +175,7 @@ namespace LTWCHARLIEKODE
             // lblPackageDuration
             // 
             this.lblPackageDuration.AutoSize = true;
-            this.lblPackageDuration.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPackageDuration.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPackageDuration.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.lblPackageDuration.Location = new System.Drawing.Point(310, 122);
             this.lblPackageDuration.Name = "lblPackageDuration";
@@ -186,7 +186,7 @@ namespace LTWCHARLIEKODE
             // lblTrainer
             // 
             this.lblTrainer.AutoSize = true;
-            this.lblTrainer.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrainer.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTrainer.Location = new System.Drawing.Point(20, 155);
             this.lblTrainer.Name = "lblTrainer";
             this.lblTrainer.Size = new System.Drawing.Size(107, 21);
@@ -196,7 +196,7 @@ namespace LTWCHARLIEKODE
             // cboTrainers
             // 
             this.cboTrainers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboTrainers.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboTrainers.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTrainers.FormattingEnabled = true;
             this.cboTrainers.Location = new System.Drawing.Point(135, 151);
             this.cboTrainers.Name = "cboTrainers";
@@ -206,7 +206,7 @@ namespace LTWCHARLIEKODE
             // lblStartDate
             // 
             this.lblStartDate.AutoSize = true;
-            this.lblStartDate.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStartDate.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStartDate.Location = new System.Drawing.Point(520, 32);
             this.lblStartDate.Name = "lblStartDate";
             this.lblStartDate.Size = new System.Drawing.Size(106, 21);
@@ -216,7 +216,7 @@ namespace LTWCHARLIEKODE
             // dtpStartDate
             // 
             this.dtpStartDate.CustomFormat = "dd/MM/yyyy";
-            this.dtpStartDate.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpStartDate.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpStartDate.Location = new System.Drawing.Point(645, 28);
             this.dtpStartDate.Name = "dtpStartDate";
@@ -227,7 +227,7 @@ namespace LTWCHARLIEKODE
             // lblEndDate
             // 
             this.lblEndDate.AutoSize = true;
-            this.lblEndDate.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEndDate.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEndDate.Location = new System.Drawing.Point(520, 75);
             this.lblEndDate.Name = "lblEndDate";
             this.lblEndDate.Size = new System.Drawing.Size(109, 21);
@@ -238,7 +238,7 @@ namespace LTWCHARLIEKODE
             // 
             this.dtpEndDate.CustomFormat = "dd/MM/yyyy";
             this.dtpEndDate.Enabled = false;
-            this.dtpEndDate.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpEndDate.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpEndDate.Location = new System.Drawing.Point(645, 71);
             this.dtpEndDate.Name = "dtpEndDate";
@@ -248,7 +248,7 @@ namespace LTWCHARLIEKODE
             // chkRenew
             // 
             this.chkRenew.AutoSize = true;
-            this.chkRenew.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkRenew.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkRenew.Location = new System.Drawing.Point(645, 110);
             this.chkRenew.Name = "chkRenew";
             this.chkRenew.Size = new System.Drawing.Size(342, 25);
@@ -260,7 +260,7 @@ namespace LTWCHARLIEKODE
             // lblTotalLabel
             // 
             this.lblTotalLabel.AutoSize = true;
-            this.lblTotalLabel.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalLabel.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalLabel.Location = new System.Drawing.Point(520, 155);
             this.lblTotalLabel.Name = "lblTotalLabel";
             this.lblTotalLabel.Size = new System.Drawing.Size(117, 25);
@@ -270,7 +270,7 @@ namespace LTWCHARLIEKODE
             // lblTotalAmount
             // 
             this.lblTotalAmount.AutoSize = true;
-            this.lblTotalAmount.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalAmount.Font = new System.Drawing.Font("Tahoma", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalAmount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblTotalAmount.Location = new System.Drawing.Point(640, 147);
             this.lblTotalAmount.Name = "lblTotalAmount";
@@ -296,7 +296,7 @@ namespace LTWCHARLIEKODE
             this.btnConfirmRegister.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConfirmRegister.FlatAppearance.BorderSize = 0;
             this.btnConfirmRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirmRegister.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmRegister.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmRegister.ForeColor = System.Drawing.Color.White;
             this.btnConfirmRegister.Location = new System.Drawing.Point(10, 5);
             this.btnConfirmRegister.Name = "btnConfirmRegister";
@@ -312,7 +312,7 @@ namespace LTWCHARLIEKODE
             this.btnReset.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReset.FlatAppearance.BorderSize = 0;
             this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReset.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReset.ForeColor = System.Drawing.Color.White;
             this.btnReset.Location = new System.Drawing.Point(345, 5);
             this.btnReset.Name = "btnReset";
@@ -329,7 +329,7 @@ namespace LTWCHARLIEKODE
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.Location = new System.Drawing.Point(940, 5);
             this.btnClose.Name = "btnClose";
@@ -346,7 +346,7 @@ namespace LTWCHARLIEKODE
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpHistory.Controls.Add(this.pnlSearch);
             this.grpHistory.Controls.Add(this.dgvHistory);
-            this.grpHistory.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpHistory.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpHistory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(43)))), ((int)(((byte)(73)))));
             this.grpHistory.Location = new System.Drawing.Point(12, 335);
             this.grpHistory.Name = "grpHistory";
@@ -370,7 +370,7 @@ namespace LTWCHARLIEKODE
             // lblSearch
             // 
             this.lblSearch.AutoSize = true;
-            this.lblSearch.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearch.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSearch.Location = new System.Drawing.Point(10, 10);
             this.lblSearch.Name = "lblSearch";
             this.lblSearch.Size = new System.Drawing.Size(137, 21);
@@ -379,7 +379,7 @@ namespace LTWCHARLIEKODE
             // 
             // txtSearch
             // 
-            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(155, 6);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(260, 29);
@@ -391,7 +391,7 @@ namespace LTWCHARLIEKODE
             this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.White;
             this.btnSearch.Location = new System.Drawing.Point(425, 6);
             this.btnSearch.Name = "btnSearch";
@@ -407,7 +407,7 @@ namespace LTWCHARLIEKODE
             this.btnShowAll.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnShowAll.FlatAppearance.BorderSize = 0;
             this.btnShowAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShowAll.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShowAll.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShowAll.ForeColor = System.Drawing.Color.White;
             this.btnShowAll.Location = new System.Drawing.Point(530, 6);
             this.btnShowAll.Name = "btnShowAll";
@@ -429,7 +429,7 @@ namespace LTWCHARLIEKODE
             this.dgvHistory.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(43)))), ((int)(((byte)(73)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 9.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -438,7 +438,7 @@ namespace LTWCHARLIEKODE
             this.dgvHistory.ColumnHeadersHeight = 35;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(235)))), ((int)(((byte)(252)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;

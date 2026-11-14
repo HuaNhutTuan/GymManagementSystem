@@ -226,7 +226,7 @@ namespace LTWCHARLIEKODE
             <head>
                 <meta charset='utf-8'>
                 <style>
-                    body {{ font-family: 'Segoe UI', Arial, sans-serif; background-color: #f4f6f9; margin: 0; padding: 20px; }}
+                    body {{ font-family: 'Tahoma', Arial, sans-serif; background-color: #f4f6f9; margin: 0; padding: 20px; }}
                     .container {{ max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }}
                     .header {{ background: linear-gradient(135deg, #1abc9c, #16a085); color: #ffffff; padding: 25px 20px; text-align: center; }}
                     .header h1 {{ margin: 0; font-size: 22px; }}

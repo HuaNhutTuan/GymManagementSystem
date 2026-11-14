@@ -331,8 +331,8 @@ namespace LTWCHARLIEKODE
             dgvPackages.ScrollBars = ScrollBars.Both;
             dgvPackages.ColumnHeadersHeight = 38;
             dgvPackages.RowTemplate.Height = 34;
-            dgvPackages.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 9.5F, FontStyle.Bold);
-            dgvPackages.DefaultCellStyle.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular);
+            dgvPackages.ColumnHeadersDefaultCellStyle.Font = new Font("Tahoma", 9.5F, FontStyle.Bold);
+            dgvPackages.DefaultCellStyle.Font = new Font("Tahoma", 9.5F, FontStyle.Regular);
             dgvPackages.DefaultCellStyle.WrapMode = DataGridViewTriState.False;
             dgvPackages.ColumnHeadersDefaultCellStyle.WrapMode = DataGridViewTriState.False;
             dgvPackages.AllowUserToResizeColumns = true;
